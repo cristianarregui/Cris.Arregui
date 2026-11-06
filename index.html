@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cris Arregui | Entrenador de Emprendedores</title>
+
+  <meta name="description" content="Cris Arregui | Entrenador de Emprendedores. Entrenamientos para emprendedores, desarrollo personal, mentalidad y crecimiento.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #080808;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* =========================
+       COLORES
+    ========================== */
+
+    :root {
+      --gold: #d4af37;
+      --gold-light: #f1d675;
+      --black: #080808;
+      --dark: #111111;
+      --gray: #1d1d1d;
+      --white: #ffffff;
+    }
+
+    /* =========================
+       BOTÓN WHATSAPP FLOTANTE
+    ========================== */
+
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      z-index: 999;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    }
+
+    /* =========================
+       NAVEGACIÓN
+    ========================== */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8,8,8,0.96);
+      border-bottom: 1px solid rgba(212,175,55,0.25);
+      padding: 14px 5%;
+    }
+
+    .nav-content {
+      max-width: 1150px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .brand {
+      font-weight: bold;
+      font-size: 18px;
+      color: var(--gold);
+    }
+
+    .nav-button {
+      color: white;
+      border: 1px solid var(--gold);
+      padding: 8px 14px;
+      border-radius: 30px;
+      font-size: 13px;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 70px 20px;
+      background:
+        radial-gradient(circle at top, rgba(212,175,55,0.18), transparent 40%),
+        linear-gradient(135deg, #050505, #151515);
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero small {
+      color: var(--gold);
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 9vw, 90px);
+      line-height: 0.95;
+      margin: 18px 0;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero h2 {
+      font-size: clamp(18px, 4vw, 28px);
+      font-weight: normal;
+      color: #dddddd;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #bbbbbb;
+      font-size: 18px;
+    }
+
+    .hero-buttons {
+      margin-top: 35px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    /* =========================
+       BOTONES
+    ========================== */
+
+    .btn {
+      display: inline-block;
+      padding: 15px 25px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+      border: 2px solid transparent;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: black;
+    }
+
+    .btn-outline {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .btn-white {
+      background: white;
+      color: black;
+    }
+
+    /* =========================
+       SECCIONES
+    ========================== */
+
+    section {
+      padding: 85px 6%;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .section-label {
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(32px, 6vw, 55px);
+      margin-bottom: 25px;
+      line-height: 1.1;
+    }
+
+    .section-title span {
+      color: var(--gold);
+    }
+
+    .text {
+      color: #c5c5c5;
+      font-size: 17px;
+      margin-bottom: 18px;
+    }
+
+    /* =========================
+       QUIÉN SOY
+    ========================== */
+
+    .about {
+      background: #101010;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-box {
+      border: 1px solid rgba(212,175,55,0.25);
+      background: linear-gradient(145deg, #161616, #0b0b0b);
+      padding: 35px;
+      border-radius: 18px;
+    }
+
+    .highlight {
+      color: var(--gold-light);
+      font-weight: bold;
+    }
+
+    /* =========================
+       RECORRIDO
+    ========================== */
+
+    .journey {
+      background: #080808;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+      margin-top: 35px;
+    }
+
+    .timeline-item {
+      border-left: 3px solid var(--gold);
+      padding: 20px 25px;
+      background: #111111;
+      border-radius: 0 12px 12px 0;
+    }
+
+    .timeline-item h3 {
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .timeline-item p {
+      color: #bbbbbb;
+    }
+
+    /* =========================
+       GIMNASIO
+    ========================== */
+
+    .gym-intro {
+      background:
+        linear-gradient(rgba(0,0,0,0.80), rgba(0,0,0,0.92)),
+        linear-gradient(135deg, #151515, #050505);
+    }
+
+    .gym-message {
+      max-width: 850px;
+      font-size: 21px;
+      color: #dddddd;
+      margin-bottom: 40px;
+    }
+
+    .gym-message strong {
+      color: var(--gold);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      padding: 30px;
+      border-radius: 18px;
+      background: #121212;
+      border: 1px solid #292929;
+      display: flex;
+      flex-direction: column;
+      min-height: 350px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card .icon {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #bbbbbb;
+      margin-bottom: 25px;
+      flex-grow: 1;
+    }
+
+    .card-blue {
+      border-top: 4px solid #1976d2;
+    }
+
+    .card-blue h3 {
+      color: #4da3ff;
+    }
+
+    .card-red {
+      border-top: 4px solid #e53935;
+    }
+
+    .card-red h3 {
+      color: #ff6461;
+    }
+
+    .card-purple {
+      border-top: 4px solid #8e44ad;
+    }
+
+    .card-purple h3 {
+      color: #c17ce0;
+    }
+
+    .card-orange {
+      border-top: 4px solid #f57c00;
+    }
+
+    .card-orange h3 {
+      color: #ffab40;
+    }
+
+    .card-green {
+      border-top: 4px solid #00a878;
+    }
+
+    .card-green h3 {
+      color: #38d9a9;
+    }
+
+    /* =========================
+       YAYUNA
+    ========================== */
+
+    .yayuna {
+      background:
+        radial-gradient(circle at top right, rgba(212,175,55,0.18), transparent 35%),
+        #101010;
+      border-top: 1px solid rgba(212,175,55,0.2);
+      border-bottom: 1px solid rgba(212,175,55,0.2);
+    }
+
+    .yayuna-box {
+      background: linear-gradient(135deg, #171717, #080808);
+      border: 1px solid rgba(212,175,55,0.45);
+      border-radius: 20px;
+      padding: 45px;
+      max-width: 950px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .yayuna-title {
+      color: var(--gold);
+      font-size: 14px;
+      letter-spacing: 4px;
+      font-weight: bold;
+    }
+
+    .yayuna-box h2 {
+      font-size: clamp(34px, 7vw, 62px);
+      margin: 15px 0;
+      line-height: 1;
+    }
+
+    .yayuna-box h3 {
+      color: #eeeeee;
+      font-size: clamp(19px, 4vw, 28px);
+      margin-bottom: 25px;
+    }
+
+    .event-info {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 30px 0;
+    }
+
+    .info-pill {
+      border: 1px solid rgba(212,175,55,0.4);
+      padding: 12px 18px;
+      border-radius: 30px;
+      color: var(--gold-light);
+    }
+
+    .price {
+      font-size: 40px;
+      font-weight: bold;
+      color: var(--gold);
+      margin: 25px 0;
+    }
+
+    /* =========================
+       CONTACTO
+    ========================== */
+
+    .contact {
+      text-align: center;
+      background: #080808;
+    }
+
+    .contact-box {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      border-top: 1px solid #222;
+      padding: 35px 20px;
+      text-align: center;
+      color: #777;
+      font-size: 14px;
+    }
+
+    footer strong {
+      color: var(--gold);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 750px) {
+
+      section {
+        padding: 65px 6%;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-box {
+        padding: 25px;
+      }
+
+      .yayuna-box {
+        padding: 30px 20px;
+      }
+
+      .nav-content {
+        flex-direction: column;
+      }
+
+      .brand {
+        text-align: center;
+      }
+
+      .hero {
+        min-height: 82vh;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- WHATSAPP FLOTANTE -->
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/5491134631657?text=Hola%20Cris%2C%20quiero%20recibir%20informaci%C3%B3n."
+    target="_blank"
+    aria-label="WhatsApp">
+    💬
+  </a>
+
+
+  <!-- NAVEGACIÓN -->
+
+  <nav>
+    <div class="nav-content">
+
+      <div class="brand">
+        CRIS ARREGUI
+      </div>
+
+      <a
+        href="https://wa.me/5491134631657?text=Hola%20Cris%2C%20quiero%20recibir%20informaci%C3%B3n."
+        target="_blank"
+        class="nav-button">
+        CONTACTAR
+      </a>
+
+    </div>
+  </nav>
+
+
+  <!-- PORTADA -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <small>ENTRENADOR DE EMPRENDEDORES</small>
+
+      <h1>
+        CRIS<br>
+        <span>ARREGUI</span>
+      </h1>
+
+      <h2>
+        No todos los emprendedores necesitan el mismo entrenamiento.
+      </h2>
+
+      <p>
+        Trabajo con emprendedores que quieren avanzar, ordenar su realidad,
+        fortalecer su mentalidad y construir un camino más consciente para
+        ellos y sus negocios.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a
+          class="btn btn-gold"
+          href="https://wa.me/5491134631657?text=Hola%20Cris%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20tus%20entrenamientos."
+          target="_blank">
+          HABLAR POR WHATSAPP
+        </a>
+
+        <a
+          class="btn btn-outline"
+          href="https://www.instagram.com/cris.arre?cplk=MTNzdG1nejRkMDZyYw=="
+          target="_blank">
+          VER INSTAGRAM
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- QUIÉN SOY -->
+
+  <section class="about" id="quien-soy">
+
+    <div class="container">
+
+      <div class="about-grid">
+
+        <div>
+
+          <div class="section-label">QUIÉN SOY</div>
+
+          <h2 class="section-title">
+            Soy <span>Cris Arregui.</span>
+          </h2>
+
+          <p class="text">
+            Soy emprendedor y entrenador de emprendedores.
+            Mi trabajo nace de una combinación que considero fundamental:
+            <span class="highlight">formación, experiencia y realidad.</span>
+          </p>
+
+          <p class="text">
+            Conozco el mundo del emprendimiento desde adentro. Las decisiones,
+            las dudas, los momentos de incertidumbre, los errores, los cambios
+            de rumbo y también la responsabilidad de seguir adelante.
+          </p>
+
+          <p class="text">
+            Además de mi experiencia como emprendedor, me formé en
+            <span class="highlight">Coaching Ontológico y Coaching Ejecutivo</span>,
+            integrando herramientas que hoy utilizo para acompañar a otros
+            emprendedores en sus propios procesos.
+          </p>
+
+        </div>
+
+        <div class="about-box">
+
+          <h3 style="color:#d4af37; margin-bottom:15px;">
+            Mi forma de trabajar
+          </h3>
+
+          <p class="text">
+            No creo que todos necesiten lo mismo.
+          </p>
+
+          <p class="text">
+            Cada emprendedor tiene una realidad diferente, un negocio diferente,
+            una historia diferente y desafíos diferentes.
+          </p>
+
+          <p class="text">
+            Por eso desarrollé distintas modalidades de entrenamiento,
+            buscando que cada persona pueda encontrar el espacio que mejor
+            se adapte al momento que está atravesando.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MI RECORRIDO -->
+
+  <section class="journey">
+
+    <div class="container">
+
+      <div class="section-label">MI RECORRIDO</div>
+
+      <h2 class="section-title">
+        De emprendedor a <span>entrenador de emprendedores.</span>
+      </h2>
+
+      <p class="text">
+        Mi recorrido no está construido solamente desde la teoría.
+        Está construido desde la experiencia de emprender, tomar decisiones,
+        atravesar momentos difíciles y seguir aprendiendo.
+      </p>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+
+          <h3>EMPRENDER</h3>
+
+          <p>
+            Vivir el emprendimiento desde adentro me permitió conocer una realidad
+            que muchas veces no aparece en los libros: la presión, la incertidumbre
+            y las decisiones que hay detrás de cada negocio.
+          </p>
+
+        </div>
+
+        <div class="timeline-item">
+
+          <h3>FORMARME</h3>
+
+          <p>
+            La formación en Coaching Ontológico y Coaching Ejecutivo amplió mi
+            manera de comprender a las personas, sus conversaciones, sus decisiones
+            y la forma en que observan su realidad.
+          </p>
+
+        </div>
+
+        <div class="timeline-item">
+
+          <h3>INTEGRAR EXPERIENCIA Y FORMACIÓN</h3>
+
+          <p>
+            Hoy mi propuesta busca unir ambos mundos: herramientas profesionales
+            y la realidad concreta que viven quienes emprenden.
+          </p>
+
+        </div>
+
+        <div class="timeline-item">
+
+          <h3>ENTRENAR EMPRENDEDORES</h3>
+
+          <p>
+            Mi objetivo no es decirle a todos qué tienen que hacer.
+            Es generar espacios de entrenamiento, conversación y trabajo
+            para que cada emprendedor pueda avanzar desde su propia realidad.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- GIMNASIO PARA EMPRENDEDORES -->
+
+  <section class="gym-intro" id="gimnasio">
+
+    <div class="container">
+
+      <div class="section-label">
+        GIMNASIO PARA EMPRENDEDORES
+      </div>
+
+      <h2 class="section-title">
+        Un espacio para <span>entrenar.</span>
+      </h2>
+
+      <p class="gym-message">
+        <strong>No todos los emprendedores necesitan el mismo entrenamiento.</strong>
+        Por eso existen diferentes modalidades, pensadas para distintas
+        necesidades, momentos y realidades.
+      </p>
+
+      <div class="cards">
+
+
+        <!-- GIMNASIO GRUPAL -->
+
+        <div class="card card-blue">
+
+          <div class="icon">🏋️</div>
+
+          <h3>GIMNASIO GRUPAL</h3>
+
+          <p>
+            Una experiencia de entrenamiento compartida durante 90 días,
+            junto a otros emprendedores. Encuentros, herramientas,
+            acciones concretas y comunidad.
+          </p>
+
+          <a
+            class="btn btn-outline"
+            href="https://wa.me/5491134631657?text=Hola%20Cris%2C%20estoy%20interesado%20en%20Gimnasio%20Grupal."
+            target="_blank">
+            ESTOY INTERESADO
+          </a>
+
+        </div>
+
+
+        <!-- UNO A UNO -->
+
+        <div class="card card-blue">
+
+          <div class="icon">👤</div>
+
+          <h3>UNO A UNO</h3>
+
+          <p>
+            Un entrenamiento personalizado de 90 días, pensado específicamente
+            según la realidad, los desafíos y los objetivos del emprendedor.
+          </p>
+
+          <a
+            class="btn btn-outline"
+            href="https://wa.me/5491134631657?text=Hola%20Cris%2C%20estoy%20interesado%20en%20Gimnasio%20UNO%20A%20UNO."
+            target="_blank">
+            ESTOY INTERESADO
+          </a>
+
+        </div>
+
+
+        <!-- EMERGENCIA -->
+
+        <div class="card card-red">
+
+          <div class="icon">🚨</div>
+
+          <h3>ENTRENAMIENTO DE EMERGENCIA</h3>
+
+          <p>
+            Para momentos en los que necesitás detenerte, analizar una situación
+            concreta y trabajar rápidamente sobre una realidad que requiere atención.
+          </p>
+
+          <a
+            class="btn btn-outline"
+            href="https://wa.me/5491134631657?text=Hola%20Cris%2C%20estoy%20interesado%20en%20Entrenamiento%20de%20Emergencia."
+            target="_blank">
+            ESTOY INTERESADO
+          </a>
+
+        </div>
+
+
+        <!-- MENTAL -->
+
+        <div class="card card-purple">
+
+          <div class="icon">🧠</div>
+
+          <h3>ENTRENAMIENTO MENTAL</h3>
+
+          <p>
+            Un espacio profundo de acompañamiento centrado en la mentalidad
+            y el ser del emprendedor: decisiones, miedos, límites, identidad,
+            procrastinación y creencias.
+          </p>
+
+          <a
+            class="btn btn-outline"
+            href="https://wa.me/5491134631657?text=Hola%20Cris%2C%20estoy%20interesado%20en%20Entrenamiento%20Mental."
+            target="_blank">
+            ESTOY INTERESADO
+          </a>
+
+        </div>
+
+
+        <!-- FULL -->
+
+        <div class="card card-orange">
+
+          <div class="icon">🔥</div>
+
+          <h3>ENTRENAMIENTO FULL</h3>
+
+          <p>
+            Un proceso intensivo diseñado para trabajar de manera enfocada
+            durante 10 jornadas individuales y generar movimiento sobre
+            una situación concreta.
+          </p>
+
+          <a
+            class="btn btn-outline"
+            href="https://wa.me/5491134631657?text=Hola%20Cris%2C%20estoy%20interesado%20en%20Entrenamiento%20FULL."
+            target="_blank">
+            ESTOY INTERESADO
+          </a>
+
+        </div>
+
+
+        <!-- MESA REDONDA -->
+
+        <div class="card card-green">
+
+          <div class="icon">🟢</div>
+
+          <h3>MESA REDONDA</h3>
+
+          <p>
+            Una modalidad exclusiva para un grupo reducido de emprendedores
+            que buscan profundidad, intercambio y trabajo durante un proceso
+            de 90 días.
+          </p>
+
+          <a
+            class="btn btn-outline"
+            href="https://wa.me/5491134631657?text=Hola%20Cris%2C%20estoy%20interesado%20en%20Mesa%20Redonda."
+            target="_blank">
+            ESTOY INTERESADO
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- YAYUNA -->
+
+  <section class="yayuna" id="yayuna">
+
+    <div class="container">
+
+      <div class="yayuna-box">
+
+        <div class="yayuna-title">
+          PROYECTO YAYUNA
+        </div>
+
+        <h2>
+          CAMBIÁ TU MENTALIDAD<br>
+          PARA QUE CAMBIE TU NEGOCIO
+        </h2>
+
+        <h3>
+          Entrenamiento para Emprendedores
+        </h3>
+
+        <p class="text">
+          Muchas veces el mayor límite de un emprendedor no está solamente
+          afuera. Está en su manera de pensar, en las creencias que construyó
+          sobre sí mismo, sobre el dinero, sobre sus posibilidades y sobre
+          lo que cree que merece.
+        </p>
+
+        <p class="text">
+          En este entrenamiento vamos a trabajar sobre las
+          <strong style="color:#d4af37;">creencias limitantes</strong>
+          y espec
