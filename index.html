@@ -6,9 +6,10 @@
 
   <title>Cris Arregui | Entrenador de Emprendedores</title>
 
-  <meta name="description" content="Cris Arregui | Entrenador de Emprendedores. Red de Emprendedores, entrenamientos, desarrollo personal, mentalidad y crecimiento.">
+  <meta name="description" content="Cris Arregui | Entrenador de Emprendedores. Red de Emprendedores, entrenamientos para emprendedores, desarrollo personal, mentalidad y crecimiento.">
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -38,7 +39,10 @@
       --green-light: #38d9a9;
     }
 
-    /* WHATSAPP FLOTANTE */
+
+    /* =========================
+       WHATSAPP FLOTANTE
+    ========================= */
 
     .whatsapp-float {
       position: fixed;
@@ -57,7 +61,10 @@
       box-shadow: 0 5px 20px rgba(0,0,0,0.5);
     }
 
-    /* NAVEGACIÓN */
+
+    /* =========================
+       NAVEGACIÓN
+    ========================= */
 
     nav {
       position: sticky;
@@ -91,7 +98,10 @@
       font-size: 13px;
     }
 
-    /* HERO */
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
       min-height: 88vh;
@@ -147,7 +157,10 @@
       gap: 15px;
     }
 
-    /* BOTONES */
+
+    /* =========================
+       BOTONES
+    ========================= */
 
     .btn {
       display: inline-block;
@@ -172,7 +185,15 @@
       color: var(--gold);
     }
 
-    /* SECCIONES */
+    .btn-green {
+      background: var(--green);
+      color: white;
+    }
+
+
+    /* =========================
+       SECCIONES GENERALES
+    ========================= */
 
     section {
       padding: 85px 6%;
@@ -208,7 +229,10 @@
       margin-bottom: 18px;
     }
 
-    /* QUIÉN SOY */
+
+    /* =========================
+       QUIÉN SOY
+    ========================= */
 
     .about {
       background: #101010;
@@ -233,7 +257,10 @@
       font-weight: bold;
     }
 
-    /* RECORRIDO */
+
+    /* =========================
+       RECORRIDO
+    ========================= */
 
     .journey {
       background: #080808;
@@ -246,4 +273,711 @@
     }
 
     .timeline-item {
-      border-left: 3px solid var(--
+      border-left: 3px solid var(--gold);
+      padding: 20px 25px;
+      background: #111111;
+      border-radius: 0 12px 12px 0;
+    }
+
+    .timeline-item h3 {
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .timeline-item p {
+      color: #bbbbbb;
+    }
+
+
+    /* =========================
+       RED DE EMPRENDEDORES
+    ========================= */
+
+    .network {
+      background:
+        radial-gradient(circle at top left, rgba(0,168,120,0.16), transparent 40%),
+        linear-gradient(135deg, #0b0b0b, #151515);
+      border-top: 1px solid rgba(0,168,120,0.25);
+      border-bottom: 1px solid rgba(0,168,120,0.25);
+    }
+
+    .network-box {
+      max-width: 950px;
+      margin: auto;
+      text-align: center;
+      padding: 50px;
+      border-radius: 22px;
+      background: linear-gradient(145deg, #121212, #080808);
+      border: 1px solid rgba(0,168,120,0.45);
+    }
+
+    .network-label {
+      color: var(--green-light);
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      margin-bottom: 15px;
+    }
+
+    .network-box h2 {
+      font-size: clamp(34px, 7vw, 62px);
+      line-height: 1;
+      margin-bottom: 25px;
+    }
+
+    .network-box h2 span {
+      color: var(--green-light);
+    }
+
+    .network-main-text {
+      max-width: 760px;
+      margin: 0 auto 30px;
+      color: #d5d5d5;
+      font-size: 19px;
+    }
+
+    .network-points {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 15px;
+      margin: 35px 0;
+      text-align: left;
+    }
+
+    .network-point {
+      background: #101010;
+      border: 1px solid rgba(0,168,120,0.25);
+      border-radius: 15px;
+      padding: 22px;
+    }
+
+    .network-point h3 {
+      color: var(--green-light);
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .network-point p {
+      color: #bbbbbb;
+      font-size: 15px;
+    }
+
+    .network-week {
+      max-width: 700px;
+      margin: 30px auto;
+      padding: 25px;
+      border-radius: 16px;
+      background: rgba(0,168,120,0.08);
+      border: 1px solid rgba(0,168,120,0.25);
+    }
+
+    .network-week h3 {
+      color: var(--green-light);
+      margin-bottom: 15px;
+      font-size: 21px;
+    }
+
+    .network-week p {
+      color: #cccccc;
+    }
+
+    .network-price {
+      margin: 35px 0 25px;
+    }
+
+    .network-price small {
+      display: block;
+      color: #aaaaaa;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 5px;
+    }
+
+    .network-price strong {
+      color: var(--green-light);
+      font-size: clamp(38px, 7vw, 58px);
+    }
+
+    .network-note {
+      color: #999999;
+      font-size: 14px;
+      max-width: 700px;
+      margin: 20px auto 30px;
+    }
+
+
+    /* =========================
+       GIMNASIO
+    ========================= */
+
+    .gym-intro {
+      background:
+        linear-gradient(rgba(0,0,0,0.80), rgba(0,0,0,0.92)),
+        linear-gradient(135deg, #151515, #050505);
+    }
+
+    .gym-message {
+      max-width: 850px;
+      font-size: 21px;
+      color: #dddddd;
+      margin-bottom: 40px;
+    }
+
+    .gym-message strong {
+      color: var(--gold);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      padding: 30px;
+      border-radius: 18px;
+      background: #121212;
+      border: 1px solid #292929;
+      display: flex;
+      flex-direction: column;
+      min-height: 350px;
+    }
+
+    .card .icon {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #bbbbbb;
+      margin-bottom: 25px;
+      flex-grow: 1;
+    }
+
+    .card-blue {
+      border-top: 4px solid #1976d2;
+    }
+
+    .card-blue h3 {
+      color: #4da3ff;
+    }
+
+    .card-red {
+      border-top: 4px solid #e53935;
+    }
+
+    .card-red h3 {
+      color: #ff6461;
+    }
+
+    .card-purple {
+      border-top: 4px solid #8e44ad;
+    }
+
+    .card-purple h3 {
+      color: #c17ce0;
+    }
+
+    .card-orange {
+      border-top: 4px solid #f57c00;
+    }
+
+    .card-orange h3 {
+      color: #ffab40;
+    }
+
+    .card-green {
+      border-top: 4px solid #00a878;
+    }
+
+    .card-green h3 {
+      color: #38d9a9;
+    }
+
+
+    /* =========================
+       PROYECTO YAYUNA
+    ========================= */
+
+    .yayuna {
+      background:
+        radial-gradient(circle at top right, rgba(212,175,55,0.18), transparent 35%),
+        #101010;
+      border-top: 1px solid rgba(212,175,55,0.2);
+      border-bottom: 1px solid rgba(212,175,55,0.2);
+    }
+
+    .yayuna-box {
+      background: linear-gradient(135deg, #171717, #080808);
+      border: 1px solid rgba(212,175,55,0.45);
+      border-radius: 20px;
+      padding: 45px;
+      max-width: 950px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .yayuna-title {
+      color: var(--gold);
+      font-size: 14px;
+      letter-spacing: 4px;
+      font-weight: bold;
+    }
+
+    .yayuna-box h2 {
+      font-size: clamp(34px, 7vw, 62px);
+      margin: 15px 0;
+      line-height: 1;
+    }
+
+    .yayuna-box h3 {
+      color: #eeeeee;
+      font-size: clamp(19px, 4vw, 28px);
+      margin-bottom: 25px;
+    }
+
+    .event-info {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 30px 0;
+    }
+
+    .info-pill {
+      border: 1px solid rgba(212,175,55,0.4);
+      padding: 12px 18px;
+      border-radius: 30px;
+      color: var(--gold-light);
+    }
+
+    .price {
+      font-size: 40px;
+      font-weight: bold;
+      color: var(--gold);
+      margin: 25px 0;
+    }
+
+
+    /* =========================
+       CONTACTO
+    ========================= */
+
+    .contact {
+      text-align: center;
+      background: #080808;
+    }
+
+    .contact-box {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      border-top: 1px solid #222;
+      padding: 35px 20px;
+      text-align: center;
+      color: #777;
+      font-size: 14px;
+    }
+
+    footer strong {
+      color: var(--gold);
+    }
+
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 750px) {
+
+      section {
+        padding: 65px 6%;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-box {
+        padding: 25px;
+      }
+
+      .yayuna-box {
+        padding: 30px 20px;
+      }
+
+      .network-box {
+        padding: 35px 20px;
+      }
+
+      .nav-content {
+        flex-direction: column;
+      }
+
+      .brand {
+        text-align: center;
+      }
+
+      .hero {
+        min-height: 82vh;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- WHATSAPP FLOTANTE -->
+
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/5491134631657?text=Hola%20Cris%2C%20quiero%20recibir%20informaci%C3%B3n."
+    target="_blank"
+    aria-label="WhatsApp">
+    💬
+  </a>
+
+
+  <!-- NAVEGACIÓN -->
+
+  <nav>
+
+    <div class="nav-content">
+
+      <div class="brand">
+        CRIS ARREGUI
+      </div>
+
+      <a
+        href="https://wa.me/5491134631657?text=Hola%20Cris%2C%20quiero%20recibir%20informaci%C3%B3n."
+        target="_blank"
+        class="nav-button">
+        CONTACTAR
+      </a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- PORTADA -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <small>ENTRENADOR DE EMPRENDEDORES</small>
+
+      <h1>
+        CRIS<br>
+        <span>ARREGUI</span>
+      </h1>
+
+      <h2>
+        No todos los emprendedores necesitan el mismo entrenamiento.
+      </h2>
+
+      <p>
+        Trabajo con emprendedores que quieren avanzar, ordenar su realidad,
+        fortalecer su mentalidad y construir un camino más consciente para
+        ellos y sus negocios.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a
+          class="btn btn-gold"
+          href="https://wa.me/5491134631657?text=Hola%20Cris%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20tus%20entrenamientos."
+          target="_blank">
+          HABLAR POR WHATSAPP
+        </a>
+
+        <a
+          class="btn btn-outline"
+          href="https://www.instagram.com/cris.arre?cplk=MTNzdG1nejRkMDZyYw=="
+          target="_blank">
+          VER INSTAGRAM
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- QUIÉN SOY -->
+
+  <section class="about" id="quien-soy">
+
+    <div class="container">
+
+      <div class="about-grid">
+
+        <div>
+
+          <div class="section-label">
+            QUIÉN SOY
+          </div>
+
+          <h2 class="section-title">
+            Soy <span>Cris Arregui.</span>
+          </h2>
+
+          <p class="text">
+            Soy emprendedor y entrenador de emprendedores.
+            Mi trabajo nace de una combinación que considero fundamental:
+            <span class="highlight">formación, experiencia y realidad.</span>
+          </p>
+
+          <p class="text">
+            Conozco el mundo del emprendimiento desde adentro. Las decisiones,
+            las dudas, los momentos de incertidumbre, los errores, los cambios
+            de rumbo y también la responsabilidad de seguir adelante.
+          </p>
+
+          <p class="text">
+            Además de mi experiencia como emprendedor, mi formación integra
+            herramientas profesionales que hoy forman parte de mi manera de trabajar.
+          </p>
+
+          <p class="text">
+            Soy
+            <span class="highlight">
+              Coach Ontológico, Coach Ejecutivo, certificado ICF Nivel 2,
+              Asesor de Empresas y Speaker.
+            </span>
+          </p>
+
+          <p class="text">
+            Esa formación se suma a mi experiencia real como emprendedor para
+            acompañar a otros emprendedores desde una mirada práctica,
+            profesional y conectada con la realidad de cada negocio.
+          </p>
+
+        </div>
+
+
+        <div class="about-box">
+
+          <h3 style="color:#d4af37; margin-bottom:15px;">
+            Mi forma de trabajar
+          </h3>
+
+          <p class="text">
+            No creo que todos necesiten lo mismo.
+          </p>
+
+          <p class="text">
+            Cada emprendedor tiene una realidad diferente, un negocio diferente,
+            una historia diferente y desafíos diferentes.
+          </p>
+
+          <p class="text">
+            Por eso desarrollé distintas modalidades de entrenamiento,
+            buscando que cada persona pueda encontrar el espacio que mejor
+            se adapte al momento que está atravesando.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MI RECORRIDO -->
+
+  <section class="journey">
+
+    <div class="container">
+
+      <div class="section-label">
+        MI RECORRIDO
+      </div>
+
+      <h2 class="section-title">
+        De emprendedor a
+        <span>entrenador de emprendedores.</span>
+      </h2>
+
+      <p class="text">
+        Mi recorrido no está construido solamente desde la teoría.
+        Está construido desde la experiencia de emprender, tomar decisiones,
+        atravesar momentos difíciles y seguir aprendiendo.
+      </p>
+
+
+      <div class="timeline">
+
+
+        <div class="timeline-item">
+
+          <h3>EMPEZAR DESDE ABAJO</h3>
+
+          <p>
+            Mi experiencia como emprendedor comenzó en negocios de barrio.
+            Tuve almacén, pollería y otros emprendimientos que me permitieron
+            conocer desde adentro lo que significa empezar, sostenerse,
+            equivocarse, volver a intentar y tomar decisiones todos los días.
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <h3>CRECER Y CONSTRUIR</h3>
+
+          <p>
+            Con el tiempo mi recorrido fue creciendo hasta desarrollar una empresa
+            como CyC Hogar. Ese camino me permitió atravesar distintas etapas
+            del mundo emprendedor y conocer realidades muy diferentes.
+          </p>
+
+          <br>
+
+          <a
+            class="btn btn-outline"
+            href="https://www.instagram.com/cyc_.hogar?mdxt=MW9yZXZpend0enh4MA=="
+            target="_blank">
+            CONOCÉ CyC HOGAR EN INSTAGRAM
+          </a>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <h3>FORMACIÓN PROFESIONAL</h3>
+
+          <p>
+            Mi formación incluye Coaching Ontológico, Coaching Ejecutivo,
+            certificación ICF Nivel 2, asesoramiento de empresas y desarrollo
+            como speaker.
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <h3>INTEGRAR EXPERIENCIA Y FORMACIÓN</h3>
+
+          <p>
+            Hoy mi propuesta une ambos mundos: la experiencia real de haber
+            emprendido y construido negocios, junto con herramientas profesionales
+            para trabajar sobre las personas, sus decisiones y sus negocios.
+          </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <h3>ENTRENAR EMPRENDEDORES</h3>
+
+          <p>
+            Mi objetivo no es decirle a todos qué tienen que hacer.
+            Es generar espacios de entrenamiento, conversación y trabajo
+            para que cada emprendedor pueda avanzar desde su propia realidad.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- RED DE EMPRENDEDORES -->
+
+  <section class="network" id="red">
+
+    <div class="container">
+
+      <div class="network-box">
+
+        <div class="network-label">
+          RED DE EMPRENDEDORES
+        </div>
+
+        <h2>
+          No emprendas
+          <span>solo.</span>
+        </h2>
+
+        <p class="network-main-text">
+          Una comunidad reducida para emprendedores que quieren estar conectados,
+          compartir experiencias, intercambiar ideas y formar parte de una red
+          donde todos están atravesando, de una manera u otra, el camino de emprender.
+        </p>
+
+
+        <div class="network-points">
+
+          <div class="network-point">
+
+            <h3>👥 UNA RED REAL</h3>
+
+            <p>
+              Un espacio para conectarte con otros emprendedores,
+              intercambiar ideas, experiencias, contactos y diferentes miradas.
+            </p>
+
+          </div>
+
+
+          <div class="network-point">
+
+            <h3>💬 COMUNIDAD ABIERTA</h3>
+
+            <p>
+              Un grupo de comunicación donde los integrantes pueden conversar,
+              compartir inquietudes y ayudarse entre ellos.
+            </p>
+
+          </div>
+
+
+          <div class="network-point">
+
+            <h3>👀 LA MIRADA DEL ENTRENADOR</h3>
+
+            <p>
+              Cada semana voy a abrir una conversación y aportar mi propia mirada
+              sobre los temas que aparezcan dentro de la comunidad.
+            </p>
+
+          </div>
+
+
+ 
