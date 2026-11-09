@@ -6,7 +6,7 @@
 
   <title>Cris Arregui | Entrenador de Emprendedores</title>
 
-  <meta name="description" content="Cris Arregui | Entrenador de Emprendedores. Red de Emprendedores, entrenamientos para emprendedores, desarrollo personal, mentalidad y crecimiento.">
+  <meta name="description" content="Cris Arregui | Entrenador de Emprendedores. Red de Emprendedores, entrenamientos, desarrollo personal, mentalidad y crecimiento.">
 
   <style>
 
@@ -36,13 +36,9 @@
       --gray: #1d1d1d;
       --white: #ffffff;
       --green: #00a878;
-      --green-light: #38d9a9;
     }
 
-
-    /* =========================
-       WHATSAPP FLOTANTE
-    ========================= */
+    /* WHATSAPP FLOTANTE */
 
     .whatsapp-float {
       position: fixed;
@@ -61,10 +57,7 @@
       box-shadow: 0 5px 20px rgba(0,0,0,0.5);
     }
 
-
-    /* =========================
-       NAVEGACIÓN
-    ========================= */
+    /* NAVEGACIÓN */
 
     nav {
       position: sticky;
@@ -98,10 +91,7 @@
       font-size: 13px;
     }
 
-
-    /* =========================
-       HERO
-    ========================= */
+    /* HERO */
 
     .hero {
       min-height: 88vh;
@@ -157,10 +147,7 @@
       gap: 15px;
     }
 
-
-    /* =========================
-       BOTONES
-    ========================= */
+    /* BOTONES */
 
     .btn {
       display: inline-block;
@@ -185,15 +172,7 @@
       color: var(--gold);
     }
 
-    .btn-green {
-      background: var(--green);
-      color: white;
-    }
-
-
-    /* =========================
-       SECCIONES GENERALES
-    ========================= */
+    /* SECCIONES */
 
     section {
       padding: 85px 6%;
@@ -229,10 +208,7 @@
       margin-bottom: 18px;
     }
 
-
-    /* =========================
-       QUIÉN SOY
-    ========================= */
+    /* QUIÉN SOY */
 
     .about {
       background: #101010;
@@ -257,10 +233,7 @@
       font-weight: bold;
     }
 
-
-    /* =========================
-       RECORRIDO
-    ========================= */
+    /* RECORRIDO */
 
     .journey {
       background: #080808;
@@ -288,15 +261,12 @@
       color: #bbbbbb;
     }
 
-
-    /* =========================
-       RED DE EMPRENDEDORES
-    ========================= */
+    /* RED DE EMPRENDEDORES */
 
     .network {
       background:
-        radial-gradient(circle at top left, rgba(0,168,120,0.16), transparent 40%),
-        linear-gradient(135deg, #0b0b0b, #151515);
+        radial-gradient(circle at top left, rgba(0,168,120,0.15), transparent 40%),
+        linear-gradient(135deg, #07100d, #080808);
       border-top: 1px solid rgba(0,168,120,0.25);
       border-bottom: 1px solid rgba(0,168,120,0.25);
     }
@@ -305,14 +275,14 @@
       max-width: 950px;
       margin: auto;
       text-align: center;
-      padding: 50px;
-      border-radius: 22px;
-      background: linear-gradient(145deg, #121212, #080808);
+      background: linear-gradient(135deg, #101715, #080808);
       border: 1px solid rgba(0,168,120,0.45);
+      border-radius: 20px;
+      padding: 50px;
     }
 
     .network-label {
-      color: var(--green-light);
+      color: #38d9a9;
       font-size: 14px;
       font-weight: bold;
       letter-spacing: 4px;
@@ -320,95 +290,75 @@
     }
 
     .network-box h2 {
-      font-size: clamp(34px, 7vw, 62px);
-      line-height: 1;
+      font-size: clamp(34px, 7vw, 60px);
+      line-height: 1.05;
       margin-bottom: 25px;
     }
 
     .network-box h2 span {
-      color: var(--green-light);
+      color: #38d9a9;
     }
 
     .network-main-text {
-      max-width: 760px;
-      margin: 0 auto 30px;
-      color: #d5d5d5;
-      font-size: 19px;
+      max-width: 750px;
+      margin: 0 auto 30px auto;
+      color: #dddddd;
+      font-size: 20px;
     }
 
-    .network-points {
+    .network-features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 15px;
-      margin: 35px 0;
+      margin: 30px 0;
       text-align: left;
     }
 
-    .network-point {
-      background: #101010;
+    .network-feature {
+      background: rgba(255,255,255,0.04);
       border: 1px solid rgba(0,168,120,0.25);
+      padding: 20px;
       border-radius: 15px;
-      padding: 22px;
+      color: #dddddd;
     }
 
-    .network-point h3 {
-      color: var(--green-light);
-      font-size: 17px;
+    .network-feature strong {
+      display: block;
+      color: #38d9a9;
       margin-bottom: 8px;
     }
 
-    .network-point p {
-      color: #bbbbbb;
-      font-size: 15px;
-    }
-
-    .network-week {
-      max-width: 700px;
-      margin: 30px auto;
+    .network-question {
+      margin: 35px auto;
+      max-width: 750px;
       padding: 25px;
-      border-radius: 16px;
+      border-radius: 15px;
+      border-left: 4px solid #38d9a9;
       background: rgba(0,168,120,0.08);
-      border: 1px solid rgba(0,168,120,0.25);
+      text-align: left;
     }
 
-    .network-week h3 {
-      color: var(--green-light);
-      margin-bottom: 15px;
-      font-size: 21px;
-    }
-
-    .network-week p {
-      color: #cccccc;
+    .network-question h3 {
+      color: #38d9a9;
+      margin-bottom: 10px;
     }
 
     .network-price {
-      margin: 35px 0 25px;
+      margin: 35px 0 25px 0;
     }
 
-    .network-price small {
-      display: block;
-      color: #aaaaaa;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+    .network-price p {
+      color: #bbbbbb;
       margin-bottom: 5px;
     }
 
     .network-price strong {
-      color: var(--green-light);
-      font-size: clamp(38px, 7vw, 58px);
+      display: block;
+      color: var(--gold);
+      font-size: clamp(34px, 6vw, 50px);
     }
 
-    .network-note {
-      color: #999999;
-      font-size: 14px;
-      max-width: 700px;
-      margin: 20px auto 30px;
-    }
-
-
-    /* =========================
-       GIMNASIO
-    ========================= */
+    /* GIMNASIO */
 
     .gym-intro {
       background:
@@ -499,10 +449,7 @@
       color: #38d9a9;
     }
 
-
-    /* =========================
-       PROYECTO YAYUNA
-    ========================= */
+    /* YAYUNA */
 
     .yayuna {
       background:
@@ -563,10 +510,7 @@
       margin: 25px 0;
     }
 
-
-    /* =========================
-       CONTACTO
-    ========================= */
+    /* CONTACTO */
 
     .contact {
       text-align: center;
@@ -586,10 +530,7 @@
       margin-top: 30px;
     }
 
-
-    /* =========================
-       FOOTER
-    ========================= */
+    /* FOOTER */
 
     footer {
       border-top: 1px solid #222;
@@ -603,10 +544,7 @@
       color: var(--gold);
     }
 
-
-    /* =========================
-       RESPONSIVE
-    ========================= */
+    /* RESPONSIVE */
 
     @media (max-width: 750px) {
 
@@ -622,12 +560,12 @@
         padding: 25px;
       }
 
-      .yayuna-box {
+      .network-box {
         padding: 30px 20px;
       }
 
-      .network-box {
-        padding: 35px 20px;
+      .yayuna-box {
+        padding: 30px 20px;
       }
 
       .nav-content {
@@ -647,9 +585,7 @@
   </style>
 </head>
 
-
 <body>
-
 
   <!-- WHATSAPP FLOTANTE -->
 
@@ -676,7 +612,9 @@
         href="https://wa.me/5491134631657?text=Hola%20Cris%2C%20quiero%20recibir%20informaci%C3%B3n."
         target="_blank"
         class="nav-button">
+
         CONTACTAR
+
       </a>
 
     </div>
@@ -713,14 +651,18 @@
           class="btn btn-gold"
           href="https://wa.me/5491134631657?text=Hola%20Cris%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20tus%20entrenamientos."
           target="_blank">
+
           HABLAR POR WHATSAPP
+
         </a>
 
         <a
           class="btn btn-outline"
           href="https://www.instagram.com/cris.arre?cplk=MTNzdG1nejRkMDZyYw=="
           target="_blank">
+
           VER INSTAGRAM
+
         </a>
 
       </div>
@@ -766,10 +708,9 @@
           </p>
 
           <p class="text">
-            Soy
-            <span class="highlight">
-              Coach Ontológico, Coach Ejecutivo, certificado ICF Nivel 2,
-              Asesor de Empresas y Speaker.
+            Soy <span class="highlight">
+            Coach Ontológico, Coach Ejecutivo, certificado ICF Nivel 2,
+            Asesor de Empresas y Speaker.
             </span>
           </p>
 
@@ -823,8 +764,7 @@
       </div>
 
       <h2 class="section-title">
-        De emprendedor a
-        <span>entrenador de emprendedores.</span>
+        De emprendedor a <span>entrenador de emprendedores.</span>
       </h2>
 
       <p class="text">
@@ -833,13 +773,13 @@
         atravesar momentos difíciles y seguir aprendiendo.
       </p>
 
-
       <div class="timeline">
-
 
         <div class="timeline-item">
 
-          <h3>EMPEZAR DESDE ABAJO</h3>
+          <h3>
+            EMPEZAR DESDE ABAJO
+          </h3>
 
           <p>
             Mi experiencia como emprendedor comenzó en negocios de barrio.
@@ -853,7 +793,9 @@
 
         <div class="timeline-item">
 
-          <h3>CRECER Y CONSTRUIR</h3>
+          <h3>
+            CRECER Y CONSTRUIR
+          </h3>
 
           <p>
             Con el tiempo mi recorrido fue creciendo hasta desarrollar una empresa
@@ -867,7 +809,9 @@
             class="btn btn-outline"
             href="https://www.instagram.com/cyc_.hogar?mdxt=MW9yZXZpend0enh4MA=="
             target="_blank">
+
             CONOCÉ CyC HOGAR EN INSTAGRAM
+
           </a>
 
         </div>
@@ -875,7 +819,9 @@
 
         <div class="timeline-item">
 
-          <h3>FORMACIÓN PROFESIONAL</h3>
+          <h3>
+            FORMACIÓN PROFESIONAL
+          </h3>
 
           <p>
             Mi formación incluye Coaching Ontológico, Coaching Ejecutivo,
@@ -888,7 +834,9 @@
 
         <div class="timeline-item">
 
-          <h3>INTEGRAR EXPERIENCIA Y FORMACIÓN</h3>
+          <h3>
+            INTEGRAR EXPERIENCIA Y FORMACIÓN
+          </h3>
 
           <p>
             Hoy mi propuesta une ambos mundos: la experiencia real de haber
@@ -901,7 +849,9 @@
 
         <div class="timeline-item">
 
-          <h3>ENTRENAR EMPRENDEDORES</h3>
+          <h3>
+            ENTRENAR EMPRENDEDORES
+          </h3>
 
           <p>
             Mi objetivo no es decirle a todos qué tienen que hacer.
@@ -931,53 +881,408 @@
         </div>
 
         <h2>
-          No emprendas
-          <span>solo.</span>
+          No emprendas <span>solo.</span>
         </h2>
 
         <p class="network-main-text">
-          Una comunidad reducida para emprendedores que quieren estar conectados,
-          compartir experiencias, intercambiar ideas y formar parte de una red
-          donde todos están atravesando, de una manera u otra, el camino de emprender.
+          Una comunidad para conectar con otros emprendedores,
+          compartir experiencias, ideas, dudas y diferentes miradas
+          sobre el camino de emprender.
         </p>
 
+        <div class="network-features">
 
-        <div class="network-points">
+          <div class="network-feature">
 
-          <div class="network-point">
+            <strong>
+              🤝 CONEXIÓN
+            </strong>
 
-            <h3>👥 UNA RED REAL</h3>
-
-            <p>
-              Un espacio para conectarte con otros emprendedores,
-              intercambiar ideas, experiencias, contactos y diferentes miradas.
-            </p>
+            Conocé y conectate con otros emprendedores.
 
           </div>
 
+          <div class="network-feature">
 
-          <div class="network-point">
+            <strong>
+              💬 COMUNIDAD ACTIVA
+            </strong>
 
-            <h3>💬 COMUNIDAD ABIERTA</h3>
-
-            <p>
-              Un grupo de comunicación donde los integrantes pueden conversar,
-              compartir inquietudes y ayudarse entre ellos.
-            </p>
+            Un espacio abierto para compartir, preguntar e intercambiar.
 
           </div>
 
+          <div class="network-feature">
 
-          <div class="network-point">
+            <strong>
+              🧠 MIRADA DEL ENTRENADOR
+            </strong>
 
-            <h3>👀 LA MIRADA DEL ENTRENADOR</h3>
-
-            <p>
-              Cada semana voy a abrir una conversación y aportar mi propia mirada
-              sobre los temas que aparezcan dentro de la comunidad.
-            </p>
+            Cada semana voy a aportar una mirada sobre un tema que surja dentro de la comunidad.
 
           </div>
 
+        </div>
 
- 
+        <div class="network-question">
+
+          <h3>
+            CADA LUNES, UNA PREGUNTA.
+          </h3>
+
+          <p class="text" style="margin-bottom:0;">
+            La semana comienza con una pregunta para abrir una conversación
+            y generar intercambio entre los integrantes de la red.
+            Durante la semana, a partir de lo que surja, voy a compartir
+            mi mirada y una herramienta, reflexión o contenido sobre ese tema.
+          </p>
+
+        </div>
+
+        <p class="text">
+          Además, una vez por mes realizaremos un encuentro grupal online
+          para conversar sobre temas relacionados con el emprendimiento,
+          la mentalidad, las decisiones y las situaciones que aparecieron
+          dentro de la comunidad.
+        </p>
+
+        <div class="network-price">
+
+          <p>
+            INVERSIÓN
+          </p>
+
+          <strong>
+            $10.000 MENSUALES
+          </strong>
+
+        </div>
+
+        <a
+          class="btn btn-gold"
+          href="https://wa.me/5491134631657?text=Hola%20Cris%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20la%20Red%20de%20Emprendedores."
+          target="_blank">
+
+          CONECTATE A LA RED
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- GIMNASIO PARA EMPRENDEDORES -->
+
+  <section class="gym-intro" id="gimnasio">
+
+    <div class="container">
+
+      <div class="section-label">
+      <!-- GIMNASIO PARA EMPRENDEDORES -->
+
+<section class="gym-intro" id="gimnasio">
+
+  <div class="container">
+
+    <div class="section-label">
+      GIMNASIO PARA EMPRENDEDORES
+    </div>
+
+    <h2 class="section-title">
+      Un espacio para <span>entrenar.</span>
+    </h2>
+
+    <p class="gym-message">
+      <strong>No todos los emprendedores necesitan el mismo entrenamiento.</strong>
+      Por eso existen diferentes modalidades, pensadas para distintas
+      necesidades, momentos y realidades.
+    </p>
+
+    <div class="cards">
+
+      <!-- GIMNASIO GRUPAL -->
+
+      <div class="card card-blue">
+
+        <div class="icon">🏋️</div>
+
+        <h3>GIMNASIO GRUPAL</h3>
+
+        <p>
+          Una experiencia de entrenamiento compartida durante 90 días,
+          junto a otros emprendedores. Encuentros, herramientas,
+          acciones concretas y comunidad.
+        </p>
+
+        <a
+          class="btn btn-outline"
+          href="https://wa.me/5491134631657?text=Hola%20Cris%2C%20estoy%20interesado%20en%20Gimnasio%20Grupal."
+          target="_blank">
+          ESTOY INTERESADO
+        </a>
+
+      </div>
+
+
+      <!-- UNO A UNO -->
+
+      <div class="card card-blue">
+
+        <div class="icon">👤</div>
+
+        <h3>UNO A UNO</h3>
+
+        <p>
+          Un entrenamiento personalizado de 90 días, pensado específicamente
+          según la realidad, los desafíos y los objetivos del emprendedor.
+        </p>
+
+        <a
+          class="btn btn-outline"
+          href="https://wa.me/5491134631657?text=Hola%20Cris%2C%20estoy%20interesado%20en%20Gimnasio%20UNO%20A%20UNO."
+          target="_blank">
+          ESTOY INTERESADO
+        </a>
+
+      </div>
+
+
+      <!-- EMERGENCIA -->
+
+      <div class="card card-red">
+
+        <div class="icon">🚨</div>
+
+        <h3>ENTRENAMIENTO DE EMERGENCIA</h3>
+
+        <p>
+          Para momentos en los que necesitás detenerte, analizar una situación
+          concreta y trabajar rápidamente sobre una realidad que requiere atención.
+        </p>
+
+        <a
+          class="btn btn-outline"
+          href="https://wa.me/5491134631657?text=Hola%20Cris%2C%20estoy%20interesado%20en%20Entrenamiento%20de%20Emergencia."
+          target="_blank">
+          ESTOY INTERESADO
+        </a>
+
+      </div>
+
+
+      <!-- MENTAL -->
+
+      <div class="card card-purple">
+
+        <div class="icon">🧠</div>
+
+        <h3>ENTRENAMIENTO MENTAL</h3>
+
+        <p>
+          Un espacio profundo de acompañamiento centrado en la mentalidad
+          y el ser del emprendedor: decisionesa          <p>
+            Un espacio profundo de acompañamiento centrado en la mentalidad
+            y el ser del emprendedor: decisiones, miedos, límites, identidad,
+            procrastinación y creencias.
+          </p>
+
+          <a
+            class="btn btn-outline"
+            href="https://wa.me/5491134631657?text=Hola%20Cris%2C%20estoy%20interesado%20en%20Entrenamiento%20Mental."
+            target="_blank">
+            ESTOY INTERESADO
+          </a>
+
+        </div>
+
+
+        <!-- FULL -->
+
+        <div class="card card-orange">
+
+          <div class="icon">🔥</div>
+
+          <h3>ENTRENAMIENTO FULL</h3>
+
+          <p>
+            Un proceso intensivo diseñado para trabajar de manera enfocada
+            durante 10 jornadas individuales y generar movimiento sobre
+            una situación concreta.
+          </p>
+
+          <a
+            class="btn btn-outline"
+            href="https://wa.me/5491134631657?text=Hola%20Cris%2C%20estoy%20interesado%20en%20Entrenamiento%20FULL."
+            target="_blank">
+            ESTOY INTERESADO
+          </a>
+
+        </div>
+
+
+        <!-- MESA REDONDA -->
+
+        <div class="card card-green">
+
+          <div class="icon">🟢</div>
+
+          <h3>MESA REDONDA</h3>
+
+          <p>
+            Una modalidad exclusiva para un grupo reducido de emprendedores
+            que buscan profundidad, intercambio y trabajo durante un proceso
+            de 90 días.
+          </p>
+
+          <a
+            class="btn btn-outline"
+            href="https://wa.me/5491134631657?text=Hola%20Cris%2C%20estoy%20interesado%20en%20Mesa%20Redonda."
+            target="_blank">
+            ESTOY INTERESADO
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PROYECTO YAYUNA -->
+
+<section class="yayuna" id="yayuna">
+
+  <div class="container">
+
+    <div class="yayuna-box">
+
+      <div class="yayuna-title">
+        PROYECTO YAYUNA
+      </div>
+
+      <h2>
+        CAMBIÁ TU MENTALIDAD<br>
+        PARA QUE CAMBIE TU NEGOCIO
+      </h2>
+
+      <h3>
+        Entrenamiento para Emprendedores
+      </h3>
+
+      <div class="event-info">
+
+        <div class="info-pill">
+          📅 25 DE NOVIEMBRE DE 2026
+        </div>
+
+        <div class="info-pill">
+          🕑 DE 14:00 A 16:00 HS
+        </div>
+
+      </div>
+
+      <p class="text">
+        📍 <strong style="color:#ffffff;">YAYUNA MAMO</strong><br>
+        Av. José de San Martín 2679<br>
+        Merlo, Buenos Aires
+      </p>
+
+      <p class="text">
+        Muchas veces el mayor límite de un emprendedor no está solamente
+        afuera. Está en su manera de pensar, en las creencias que sostiene
+        y en la forma en la que interpreta su propia realidad.
+      </p>
+
+      <p class="text">
+        En este entrenamiento vamos a trabajar sobre las
+        <strong style="color:#d4af37;">creencias limitantes</strong>
+        y especialmente sobre aquellas que pueden estar influyendo
+        en tu relación con el dinero, el crecimiento y tus posibilidades.
+      </p>
+
+      <div class="price">
+        INVERSIÓN:<br>
+        $20.000
+      </div>
+
+      <a
+        class="btn btn-gold"
+        href="https://wa.me/5491134631657?text=Hola%20Cris%2C%20quiero%20reservar%20mi%20lugar%20para%20el%20Proyecto%20Yayuna."
+        target="_blank">
+        QUIERO MI LUGAR
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACTO -->
+
+<section class="contact">
+
+  <div class="container contact-box">
+
+    <div class="section-label">
+      CONTACTO
+    </div>
+
+    <h2 class="section-title">
+      ¿Querés trabajar sobre <span>tu realidad?</span>
+    </h2>
+
+    <p class="text">
+      Si sentís que es momento de avanzar, ordenar ideas, trabajar sobre
+      tu mentalidad o encontrar el entrenamiento que mejor        a tu momento actual, podemos conversar.
+      </p>
+
+      <div class="contact-buttons">
+
+        <a
+          class="btn btn-gold"
+          href="https://wa.me/5491134631657?text=Hola%20Cris%2C%20quiero%20recibir%20informaci%C3%B3n."
+          target="_blank">
+          HABLAR POR WHATSAPP
+        </a>
+
+        <a
+          class="btn btn-outline"
+          href="https://www.instagram.com/cris.arre?cplk=MTNzdG1nejRkMDZyYw=="
+          target="_blank">
+          VER INSTAGRAM
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <p>
+    <strong>Cris Arregui</strong> | Entrenador de Emprendedores
+  </p>
+
+  <p style="margin-top:10px;">
+    © 2026 - Todos los derechos reservados.
+  </p>
+
+</footer>
+
+</body>
+</html>
