@@ -1,538 +1,1634 @@
-CRIS ARREGUI
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cris Arregui | Entrenador de Emprendedores</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --negro:#090909;
+    --negro-suave:#121212;
+    --negro-card:#181818;
+    --dorado:#d4af37;
+    --dorado-claro:#f0d675;
+    --blanco:#f5f5f5;
+    --gris:#b8b8b8;
+    --borde:#2a2a2a;
+
+    --azul:#3b82f6;
+    --rojo:#e53935;
+    --violeta:#9c5ce6;
+    --naranja:#f57c00;
+    --verde:#20b889;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--negro);
+    color:var(--blanco);
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:min(1120px, 90%);
+    margin:auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:rgba(9,9,9,.96);
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid var(--borde);
+}
+
+.navbar{
+    min-height:82px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-family:Georgia, "Times New Roman", serif;
+    font-size:clamp(24px,4vw,34px);
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:var(--dorado);
+}
+
+nav{
+    display:flex;
+    gap:24px;
+    align-items:center;
+}
+
+nav a{
+    color:var(--gris);
+    font-size:14px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--dorado);
+}
 
-ENTRENADOR DE EMPRENDEDORES
+/* =========================
+   BOTONES
+========================= */
 
-TU NEGOCIO TAMBIÉN NECESITA ENTRENAMIENTO.
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
 
-No todos los emprendedores están atravesando el mismo momento.
+    padding:16px 26px;
 
-Algunos necesitan ordenar su negocio.
-Otros necesitan tomar decisiones.
-Algunos necesitan trabajar sobre su mentalidad.
-Y otros simplemente necesitan frenar, mirar su realidad y encontrar una nueva manera de avanzar.
+    border-radius:50px;
 
-Por eso no creo en una única respuesta para todos.
+    font-weight:bold;
 
-Creo en el entrenamiento que se adapta a tu momento.
+    transition:.3s;
+}
 
-QUIÉN SOY
+.btn:hover{
+    transform:translateY(-2px);
+}
 
-Soy Cris Arregui, Entrenador de Emprendedores.
+.btn-gold{
+    background:var(--dorado);
+    color:#111;
+}
 
-Acompaño a emprendedores que quieren trabajar sobre su realidad, mirar su negocio desde otro lugar y generar movimiento en aquello que hoy sienten que necesitan transformar.
+.btn-outline{
+    border:1px solid rgba(212,175,55,.7);
+    color:var(--dorado-claro);
+}
 
-Mi trabajo no consiste en decirte qué tenés que hacer.
+/* =========================
+   HERO
+========================= */
 
-Consiste en generar espacios de conversación, reflexión y entrenamiento para que puedas observar tu realidad, cuestionar lo que hoy te está frenando y construir nuevas posibilidades de acción.
+.hero{
+    min-height:88vh;
 
-Porque muchas veces el problema no es solamente lo que pasa afuera.
+    display:flex;
+    align-items:center;
 
-También importa cómo lo estás mirando.
+    padding:80px 0;
 
-GIMNASIO PARA EMPRENDEDORES
+    background:
+    radial-gradient(
+        circle at 75% 25%,
+        rgba(212,175,55,.12),
+        transparent 30%
+    ),
+    linear-gradient(
+        180deg,
+        #090909,
+        #10100e
+    );
+}
 
-UN ESPACIO PARA ENTRENAR TU REALIDAD.
+.hero-content{
+    max-width:900px;
+}
 
-El Gimnasio para Emprendedores nace de una idea simple:
+.eyebrow,
+.section-label{
+    color:var(--dorado);
 
-Un emprendedor no necesita solamente información.
+    text-transform:uppercase;
 
-Necesita espacios para pensar.
+    letter-spacing:4px;
 
-Para detenerse.
+    font-size:13px;
+    font-weight:bold;
 
-Para mirar lo que está pasando.
+    margin-bottom:20px;
+}
 
-Para conversar con otros.
+.hero h1{
+    font-family:Georgia, "Times New Roman", serif;
 
-Y, fundamentalmente, para entrenar nuevas maneras de enfrentar su realidad.
+    font-size:clamp(52px,8vw,92px);
 
-Acá no venís a buscar fórmulas mágicas.
+    line-height:1;
 
-Venís a trabajar.
+    margin-bottom:28px;
+}
 
-SER · HACER · TENER
+.hero h1 span{
+    color:var(--dorado);
+}
 
-Todo cambio comienza en la manera en que observamos.
+.hero-text{
+    color:var(--gris);
 
-Por eso, el entrenamiento parte de una mirada que conecta tres dimensiones:
+    font-size:clamp(18px,2vw,22px);
 
-SER
+    max-width:760px;
 
-Cómo te observás.
-Qué creencias sostenés.
-Cómo interpretás lo que te pasa.
+    margin-bottom:35px;
+}
 
-HACER
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
 
-Qué decisiones tomás.
-Qué acciones repetís.
-Qué conversaciones estás teniendo —o evitando.
+/* =========================
+   SECCIONES GENERALES
+========================= */
 
-TENER
+section{
+    padding:100px 0;
+}
 
-Los resultados que hoy estás construyendo en tu negocio y en tu realidad.
+.section-title{
+    font-family:Georgia, "Times New Roman", serif;
 
-Porque muchas veces queremos resultados diferentes...
+    font-size:clamp(42px,6vw,70px);
 
-sin cambiar nada de lo que hacemos.
+    line-height:1.1;
 
-Y muchas veces queremos cambiar lo que hacemos...
+    max-width:900px;
 
-sin revisar desde dónde lo estamos haciendo.
+    margin-bottom:28px;
+}
 
-NO TODOS NECESITAN EL MISMO ENTRENAMIENTO.
+.section-title span{
+    color:var(--dorado);
+}
 
-Cada emprendedor atraviesa momentos diferentes.
+.intro-text{
+    color:var(--gris);
 
-Por eso existen distintas modalidades de entrenamiento, pensadas para trabajar según tu realidad actual, tus necesidades y el momento que estás atravesando.
+    font-size:20px;
 
-Podemos trabajar de manera grupal.
+    max-width:850px;
+}
 
-De forma individual.
+/* =========================
+   CAJAS
+========================= */
 
-Sobre una situación puntual.
+.about-box{
+    margin-top:45px;
 
-Sobre tu mentalidad.
+    background:var(--negro-suave);
 
-O dentro de un proceso más profundo y personalizado.
+    border:1px solid var(--borde);
 
-Lo importante no es entrar en cualquier entrenamiento.
+    border-radius:28px;
 
-Lo importante es encontrar el espacio que tenga sentido para vos y para tu realidad.
+    padding:45px;
+}
 
-¿POR DÓNDE EMPEZAR?
+.about-box p{
+    color:var(--gris);
 
-No tenés que saberlo todo antes de escribir.
+    font-size:18px;
 
-Podés contarme en qué momento está tu negocio, qué situación estás atravesando o qué sentís que hoy necesitás trabajar.
+    margin-bottom:20px;
+}
 
-A partir de ahí, conversamos.
+.about-box p:last-child{
+    margin-bottom:0;
+}
 
-Y vemos juntos qué modalidad puede ajustarse mejor a tu momento.
+.about-box strong{
+    color:var(--blanco);
+}
 
-[ BOTÓN: HABLAR POR WHATSAPP ]
-MODALIDADES DE ENTRENAMIENTO
+/* =========================
+   TARJETAS ENTRENAMIENTOS
+========================= */
 
-NO TODOS NECESITAN EL MISMO ENTRENAMIENTO.
+.training-grid{
+    display:grid;
 
-Cada emprendedor atraviesa momentos diferentes.
+    grid-template-columns:repeat(2,1fr);
 
-Por eso, dentro del Gimnasio para Emprendedores existen distintas modalidades.
+    gap:25px;
 
-Algunas están pensadas para trabajar en grupo.
+    margin-top:50px;
+}
 
-Otras permiten un acompañamiento individual.
+.training-card{
+    background:var(--negro-card);
 
-Algunas apuntan a una situación puntual.
+    border:1px solid var(--borde);
 
-Y otras proponen un proceso más profundo.
+    border-top:5px solid var(--dorado);
 
-La modalidad no se elige solamente por lo que querés lograr.
+    border-radius:28px;
 
-También tiene que tener sentido para el momento que estás atravesando.
+    padding:40px;
 
-GIMNASIO GRUPAL
+    min-height:370px;
 
-90 DÍAS · COMUNIDAD DE EMPRENDEDORES
+    display:flex;
 
-Un espacio de entrenamiento pensado para emprendedores que quieren trabajar, aprender, compartir y avanzar junto a otras personas que también están construyendo su propio camino.
+    flex-direction:column;
 
-Durante el proceso trabajamos sobre diferentes temas vinculados al mundo emprendedor, combinando reflexión, conversaciones y acciones concretas.
+    justify-content:space-between;
+}
 
-Porque emprender no significa tener todas las respuestas.
+.training-card.blue{
+    border-top-color:var(--azul);
+}
 
-Muchas veces también significa poder conversar con otros, escuchar nuevas miradas y descubrir posibilidades que solo no estabas viendo.
+.training-card.red{
+    border-top-color:var(--rojo);
+}
 
-Un espacio para entrenar, compartir y crecer en comunidad.
+.training-card.violet{
+    border-top-color:var(--violeta);
+}
 
-[ BOTÓN: QUIERO SABER MÁS ]
+.training-card.orange{
+    border-top-color:var(--naranja);
+}
 
-GIMNASIO UNO A UNO
+.training-card.green{
+    border-top-color:var(--verde);
+}
 
-90 DÍAS · ENTRENAMIENTO PERSONALIZADO
+.card-tag{
+    color:var(--dorado);
 
-Un proceso individual para trabajar sobre tu realidad de manera más personalizada.
+    text-transform:uppercase;
 
-Durante 90 días vamos generando encuentros pensados para mirar lo que está pasando en tu negocio, las decisiones que necesitás tomar y aquellas situaciones que hoy requieren atención.
+    letter-spacing:3px;
 
-No existe un recorrido idéntico para todos.
+    font-size:12px;
 
-El proceso se construye a partir de tu realidad y de lo que vaya apareciendo durante el entrenamiento.
+    font-weight:bold;
 
-Un espacio individual para detenerte, observar, trabajar y avanzar.
+    margin-bottom:18px;
+}
 
-[ BOTÓN: QUIERO SABER MÁS ]
+.training-card h3{
+    font-family:Georgia, "Times New Roman", serif;
 
-ENTRENAMIENTO DE EMERGENCIA
+    font-size:clamp(32px,4vw,42px);
 
-PUNTUAL · URGENTE
+    line-height:1.1;
 
-Hay momentos en los que no necesitás iniciar un proceso largo.
+    margin-bottom:20px;
+}
 
-Necesitás detenerte.
+.training-card p{
+    color:var(--gris);
 
-Mirar una situación concreta.
+    font-size:17px;
+}
 
-Entender qué está pasando.
+.card-link{
+    margin-top:30px;
 
-Y trabajar sobre aquello que hoy requiere atención.
+    color:var(--dorado-claro);
 
-El Entrenamiento de Emergencia está pensado para esos momentos.
+    font-weight:bold;
+}
 
-Comenzamos con una conversación para comprender tu situación y, a partir de ahí, analizamos cuál puede ser la mejor manera de abordar lo que está ocurriendo.
+/* =========================
+   INICIO DEL SITIO
+========================= */
 
-Un espacio puntual para trabajar cuando sentís que algo necesita ser atendido.
+</style>
 
-[ BOTÓN: QUIERO SABER MÁS ]
+</head>
 
-ENTRENAMIENTO MENTAL
+<body>
 
-MENTALIDAD · SER
+<header>
 
-Muchas veces, lo que nos frena no está solamente afuera.
+    <div class="container navbar">
 
-También está en la manera en que pensamos.
+        <a href="#inicio" class="logo">
+            CRIS <span>ARREGUI</span>
+        </a>
 
-En las creencias que sostenemos.
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#entrenamientos">Entrenamientos</a>
+            <a href="#red">Red</a>
+            <a href="#yayuna">Yayuna</a>
+            <a href="#preguntas">Preguntas</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
 
-En los miedos que repetimos.
+    </div>
 
-En los límites que nos imponemos.
+</header>
 
-Y en la forma en que interpretamos nuestra propia realidad.
+<main id="inicio">
 
-El Entrenamiento Mental es un espacio profundo de acompañamiento centrado en la mentalidad y el ser del emprendedor.
+<!-- =========================
+     PORTADA
+========================= -->
 
-Un espacio para trabajar sobre decisiones, miedos, límites, identidad, procrastinación y creencias.
+<section class="hero">
 
-Porque transformar lo que hacés también puede requerir mirar desde dónde lo estás haciendo.
+    <div class="container">
 
-Este entrenamiento no reemplaza un proceso terapéutico, psicológico ni ningún acompañamiento profesional de salud mental.
+        <div class="hero-content">
 
-[ BOTÓN: QUIERO SABER MÁS ]
+            <div class="eyebrow">
+                Cris Arregui | Entrenador de Emprendedores
+            </div>
 
-ENTRENAMIENTO FULL
+            <h1>
+                Tu negocio también necesita
+                <span>entrenamiento.</span>
+            </h1>
 
-10 JORNADAS · INTENSIVO
+            <p class="hero-text">
+                No todos los emprendedores están atravesando el mismo momento.
+                Algunos necesitan ordenar su negocio. Otros necesitan tomar
+                decisiones. Y otros necesitan frenar, mirar su realidad y trabajar
+                sobre su manera de pensar.
+            </p>
 
-Un proceso intensivo para trabajar de manera enfocada sobre tu realidad.
+            <div class="hero-buttons">
 
-Durante 10 jornadas individuales, generamos un espacio para detenernos, mirar lo que está pasando y trabajar sobre aquello que hoy necesita movimiento.
+                <a href="#entrenamientos" class="btn btn-gold">
+                    Ver entrenamientos
+                </a>
 
-No se trata de recorrer un camino teórico.
+                <a href="#contacto" class="btn btn-outline">
+                    Hablemos
+                </a>
 
-Se trata de trabajar.
+            </div>
 
-Conversar.
+        </div>
 
-Observar.
+    </div>
 
-Cuestionar.
+</section>
 
-Y generar nuevas posibilidades de acción.
+<!-- =========================
+     GIMNASIO PARA EMPRENDEDORES
+========================= -->
 
-Un entrenamiento pensado para quienes quieren realizar un trabajo más intensivo y enfocado.
+<section id="gimnasio">
 
-[ BOTÓN: QUIERO SABER MÁS ]
+    <div class="container">
 
-MESA REDONDA
+        <div class="section-label">
+            Gimnasio para Emprendedores
+        </div>
 
-90 DÍAS · GRUPO REDUCIDO
+        <h2 class="section-title">
+            Un espacio para
+            <span>entrenar tu realidad.</span>
+        </h2>
 
-Una modalidad exclusiva para un grupo reducido de emprendedores.
+        <div class="about-box">
 
-Un espacio pensado para quienes buscan profundidad, intercambio y trabajo compartido durante un proceso de 90 días.
+            <p>
+                El Gimnasio para Emprendedores nace de una idea simple:
+                <strong>
+                    un emprendedor no necesita solamente información.
+                </strong>
+            </p>
 
-La Mesa Redonda permite generar conversaciones más cercanas y un intercambio más profundo entre los participantes.
+            <p>
+                Necesita espacios para detenerse, pensar, mirar lo que está
+                pasando y trabajar sobre su propia realidad.
+            </p>
 
-Distintas realidades.
+            <p>
+                Acá no venís a buscar fórmulas mágicas.
+                Venís a entrenar.
+            </p>
 
-Distintas experiencias.
+            <p>
+                A observar tu negocio desde otro lugar, cuestionar lo que hoy
+                te está frenando y generar movimiento sobre aquello que sentís
+                que necesita atención.
+            </p>
 
-Distintas miradas.
+            <p>
+                <strong>
+                    No todos necesitan el mismo entrenamiento.
+                </strong>
+            </p>
 
-Pero un mismo espacio para pensar, conversar y entrenar.
+            <p>
+                Por eso existen distintas modalidades, pensadas según el momento
+                y la realidad que está atravesando cada emprendedor.
+            </p>
 
-Porque a veces, una conversación con las personas adecuadas puede abrir posibilidades que antes no estabas viendo.
+        </div>
 
-[ BOTÓN: QUIERO SABER MÁS ]
+    </div>
 
-¿CUÁL ES EL ENTRENAMIENTO PARA VOS?
+</section>q
+  <!-- =========================
+     ENTRENAMIENTOS
+========================= -->
 
-No siempre es necesario que sepas cuál elegir antes de escribir.
+<section id="entrenamientos">
 
-Contame qué está pasando.
+    <div class="container">
 
-En qué momento está tu negocio.
+        <div class="section-label">
+            Modalidades de entrenamiento
+        </div>
 
-Qué situación estás atravesando.
+        <h2 class="section-title">
+            No todos necesitan el mismo
+            <span>entrenamiento.</span>
+        </h2>
 
-O qué sentís que hoy necesitás trabajar.
+        <p class="intro-text">
+            Por eso existen diferentes modalidades, pensadas para acompañar
+            distintos momentos, necesidades y realidades.
+        </p>
 
-Conversamos y vemos juntos qué espacio puede tener más sentido para tu realidad.
+        <div class="training-grid">
 
-[ BOTÓN: HABLAR POR WHATSAPP ]
-CÓMO EMPEZAMOS
+            <!-- GIMNASIO GRUPAL -->
 
-TRES PASOS, SIN VUELTAS.
+            <article class="training-card">
 
-1
+                <div>
 
-ESCRIBIME
+                    <div class="card-tag">
+                        90 días · Grupal
+                    </div>
 
-Contame por WhatsApp en qué momento está tu negocio y qué te gustaría trabajar.
+                    <h3>
+                        Gimnasio Grupal
+                    </h3>
 
-No necesitás tener todo claro.
+                    <p>
+                        Un espacio compartido con otros emprendedores para
+                        entrenar, conversar, observar la realidad y trabajar
+                        sobre situaciones concretas del camino emprendedor.
+                    </p>
 
-A veces, simplemente poder poner en palabras lo que está pasando ya es un primer paso.
+                </div>
 
-2
+                <a
+                    href="https://wa.me/5491134631657"
+                    target="_blank"
+                    class="card-link"
+                >
+                    Quiero saber más →
+                </a>
 
-CONVERSEMOS
+            </article>
 
-Miramos tu realidad y conversamos sobre aquello que hoy te está ocupando, preocupando o frenando.
 
-A partir de ahí, vemos juntos qué modalidad de entrenamiento puede ajustarse mejor a lo que necesitás.
+            <!-- UNO A UNO -->
 
-3
+            <article class="training-card blue">
 
-EMPEZÁ A ENTRENAR
+                <div>
 
-Arrancás con un espacio pensado para tu momento y tu realidad.
+                    <div class="card-tag">
+                        90 días · Personalizado
+                    </div>
 
-Porque no se trata de entrar en cualquier proceso.
+                    <h3>
+                        Gimnasio Uno a Uno
+                    </h3>
 
-Se trata de encontrar un espacio que tenga sentido para vos y para el momento que estás atravesando.
+                    <p>
+                        Un proceso individual y personalizado para trabajar
+                        directamente sobre tu realidad, tu negocio, tus
+                        decisiones y aquello que vaya apareciendo durante
+                        el proceso.
+                    </p>
 
-RED DE EMPRENDEDORES
+                </div>
 
-CONECTARNOS TAMBIÉN ES PARTE DEL CAMINO.
+                <a
+                    href="https://wa.me/5491134631657"
+                    target="_blank"
+                    class="card-link"
+                >
+                    Quiero saber más →
+                </a>
 
-Emprender puede ser un camino muy solitario.
+            </article>
 
-Por eso, además de los diferentes espacios de entrenamiento, existe la Red de Emprendedores.
 
-Un espacio para conectar, compartir, conversar y encontrarse con otros emprendedores.
+            <!-- EMERGENCIA -->
 
-La Red no reemplaza al Gimnasio para Emprendedores.
+            <article class="training-card red">
 
-Es parte de un ecosistema más amplio.
+                <div>
 
-Un lugar complementario donde las personas pueden generar vínculos, compartir experiencias y seguir creciendo junto a otros.
+                    <div class="card-tag">
+                        Situación puntual
+                    </div>
 
-NO SE TRATA SOLAMENTE DE CONOCER PERSONAS.
+                    <h3>
+                        Entrenamiento de Emergencia
+                    </h3>
 
-Se trata de conectar con otros emprendedores.
+                    <p>
+                        Para esos momentos en los que algo necesita atención.
+                        Una situación concreta, un problema, una decisión o
+                        una realidad que hoy sentís que no podés seguir
+                        postergando.
+                    </p>
 
-Escuchar otras historias.
+                </div>
 
-Compartir experiencias.
+                <a
+                    href="https://wa.me/5491134631657"
+                    target="_blank"
+                    class="card-link"
+                >
+                    Quiero saber más →
+                </a>
 
-Hacer preguntas.
+            </article>
 
-Encontrar nuevas miradas.
 
-Y descubrir que, muchas veces, otras personas también están atravesando situaciones parecidas a las tuyas.
+            <!-- ENTRENAMIENTO MENTAL -->
 
-EN LA RED, SEGUIMOS CONECTADOS.
+            <article class="training-card violet">
 
-La idea es generar un espacio vivo para los emprendedores.
+                <div>
 
-Un lugar donde puedan aparecer conversaciones, reflexiones, preguntas y oportunidades de conexión.
+                    <div class="card-tag">
+                        Mentalidad · Ser
+                    </div>
 
-Porque crecer también puede ser compartir el camino.
+                    <h3>
+                        Entrenamiento Mental
+                    </h3>
 
-PROYECTO YAYUNA
+                    <p>
+                        Un espacio profundo para trabajar sobre la manera en
+                        que observás tu realidad, tus creencias, tus límites,
+                        tus miedos y aquellas conversaciones internas que
+                        pueden estar influyendo en tus decisiones.
+                    </p>
 
-PRÓXIMO ENCUENTRO
+                </div>
 
-CAMBIÁ TU MENTALIDAD PARA QUE CAMBIE TU NEGOCIO.
+                <a
+                    href="https://wa.me/5491134631657"
+                    target="_blank"
+                    class="card-link"
+                >
+                    Quiero saber más →
+                </a>
 
-Entrenamiento para emprendedores.
+            </article>
 
-Muchas veces, el mayor límite de un emprendedor no está solamente afuera.
 
-Está en su manera de pensar.
+            <!-- FULL -->
 
-En las creencias que sostiene.
+            <article class="training-card orange">
 
-Y en la forma en que interpreta su propia realidad.
+                <div>
 
-En este encuentro vamos a trabajar sobre las creencias limitantes y, especialmente, sobre aquellas que pueden estar influyendo en tu relación con el dinero, el crecimiento y tus posibilidades.
+                    <div class="card-tag">
+                        Intensivo · 10 jornadas
+                    </div>
 
-Un espacio para detenerte, observar y empezar a cuestionar aquello que quizás hoy está condicionando tus decisiones.
+                    <h3>
+                        Entrenamiento Full
+                    </h3>
 
-MIÉRCOLES 25 DE NOVIEMBRE DE 2026
+                    <p>
+                        Un proceso intensivo para trabajar de manera enfocada
+                        sobre una realidad concreta, generar claridad y avanzar
+                        sobre aquello que hoy necesita movimiento.
+                    </p>
 
-DE 14:00 A 16:00 HS
+                </div>
 
-YAYUNA MANO
+                <a
+                    href="https://wa.me/5491134631657"
+                    target="_blank"
+                    class="card-link"
+                >
+                    Quiero saber más →
+                </a>
 
-Av. José de San Martín 2679
-Merlo, Buenos Aires
+            </article>
 
-INVERSIÓN
 
-$20.000
+            <!-- MESA REDONDA -->
 
-[ BOTÓN: QUIERO MI LUGAR ]
+            <article class="training-card green">
 
-IMPORTANTE:
+                <div>
 
-Cuando finalice el encuentro del 25 de noviembre de 2026, esta sección se actualizará.
+                    <div class="card-tag">
+                        Grupo reducido · 90 días
+                    </div>
 
-El contador dejará de ser necesario y el espacio podrá transformarse en:
+                    <h3>
+                        Mesa Redonda
+                    </h3>
 
-PROYECTO YAYUNA
+                    <p>
+                        Una experiencia exclusiva para un grupo reducido de
+                        emprendedores que buscan profundidad, conversación,
+                        intercambio de miradas y trabajo sobre sus propias
+                        realidades.
+                    </p>
 
-¿QUÉ PASÓ EN PROYECTO YAYUNA?
+                </div>
 
-25 DE NOVIEMBRE DE 2026
+                <a
+                    href="https://wa.me/5491134631657"
+                    target="_blank"
+                    class="card-link"
+                >
+                    Quiero saber más →
+                </a>
 
-Un espacio de encuentro y entrenamiento para emprendedores donde trabajamos sobre nuestras creencias, la manera en que interpretamos nuestra realidad y cómo esas interpretaciones pueden influir en nuestras decisiones.
+            </article>
 
-[AQUÍ: VIDEO DEL EVENTO]
+        </div>
 
-[AQUÍ: FOTOS DEL EVENTO]
+    </div>
 
-[AQUÍ: BREVE RESUMEN DE LA EXPERIENCIA]
+</section>
 
-Proyecto Yayuna no tiene por qué desaparecer cuando termina.
 
-El encuentro puede quedar como parte de la historia y evolución de este espacio.
+<!-- =========================
+     CÓMO EMPEZAMOS
+========================= -->
 
-¿QUERÉS SER PARTE?
+<section id="como-empezamos">
 
-Si sentís que necesitás trabajar sobre tu negocio, tu mentalidad o simplemente querés conectar con otros emprendedores, podemos conversar.
+    <div class="container">
 
-Contame en qué momento estás.
+        <div class="section-label">
+            Cómo empezamos
+        </div>
 
-Y vemos juntos por dónde empezar.
+        <h2 class="section-title">
+            Tres pasos.
+            <span>Sin vueltas.</span>
+        </h2>
 
-[ BOTÓN: HABLAR POR WHATSAPP ]
-PREGUNTAS FRECUENTES
+        <div class="steps">
 
-¿CÓMO SÉ QUÉ ENTRENAMIENTO ES EL INDICADO PARA MÍ?
+            <article class="step">
 
-No necesitás saberlo antes de escribir.
+                <div class="step-number">
+                    01
+                </div>
 
-Podés contarme qué está pasando en tu negocio, qué situación estás atravesando o qué sentís que hoy necesitás trabajar.
+                <h3>
+                    Escribime
+                </h3>
 
-A partir de una conversación, podemos ver qué modalidad tiene más sentido para tu momento.
+                <p>
+                    Contame qué está pasando hoy en tu negocio o qué situación
+                    estás atravesando.
+                </p>
 
-¿QUÉ DIFERENCIA HAY ENTRE EL GIMNASIO GRUPAL Y EL UNO A UNO?
+            </article>
 
-El Gimnasio Grupal es un espacio compartido con otros emprendedores, donde el aprendizaje, las conversaciones y las diferentes miradas forman parte del proceso.
 
-El Gimnasio Uno a Uno es un espacio individual y personalizado, pensado para trabajar directamente sobre tu realidad y aquello que vaya apareciendo durante el proceso.
+            <article class="step">
 
-Son experiencias diferentes.
+                <div class="step-number">
+                    02
+                </div>
 
-La elección depende del momento que estés atravesando y de la manera en que quieras trabajar.
+                <h3>
+                    Conversemos
+                </h3>
 
-¿QUÉ ES LA RED DE EMPRENDEDORES?
+                <p>
+                    Observamos tu realidad y vemos qué modalidad puede tener
+                    más sentido para el momento que estás atravesando.
+                </p>
 
-La Red de Emprendedores es un espacio complementario dentro del ecosistema.
+            </article>
 
-Su objetivo es conectar emprendedores, generar conversaciones, compartir experiencias y crear nuevas oportunidades de encuentro.
 
-No reemplaza los entrenamientos del Gimnasio para Emprendedores.
+            <article class="step">
 
-Es otro espacio para seguir conectados, compartir y crecer junto a otros.
+                <div class="step-number">
+                    03
+                </div>
 
-¿NECESITO TENER UN NEGOCIO GRANDE PARA PARTICIPAR?
+                <h3>
+                    Empezá a entrenar
+                </h3>
 
-No.
+                <p>
+                    Comenzamos a trabajar sobre tu realidad y sobre aquello
+                    que hoy necesita atención.
+                </p>
 
-El tamaño de tu negocio no define si podés o no formar parte de estos espacios.
+            </article>
 
-Hay emprendedores que recién están comenzando.
+        </div>
 
-Otros que ya tienen un negocio funcionando.
+    </div>
 
-Y otros que están atravesando momentos de crecimiento, cambios o dificultades.
+</section>
 
-Lo importante es que exista una realidad sobre la cual quieras trabajar.
 
-¿QUÉ PASA SI NO SÉ EXACTAMENTE QUÉ NECESITO?
+<!-- =========================
+     RED DE EMPRENDEDORES
+========================= -->
 
-No pasa nada.
+<section id="red">
 
-No necesitás llegar con todas las respuestas.
+    <div class="container">
 
-Muchas veces, el primer paso es justamente poder conversar sobre lo que está pasando.
+        <div
+            class="section-label"
+            style="color:var(--verde);"
+        >
+            Red de Emprendedores
+        </div>
 
-Podemos hablar y, a partir de ahí, observar juntos qué tipo de espacio podría tener más sentido para vos.
+        <h2 class="section-title">
+            No emprendas
+            <span style="color:var(--verde);">
+                completamente solo.
+            </span>
+        </h2>
 
-¿EL ENTRENAMIENTO MENTAL REEMPLAZA UNA TERAPIA O UN TRATAMIENTO PSICOLÓGICO?
+        <p class="intro-text">
+            Emprender puede ser un camino muy solitario.
+            Por eso también necesitamos espacios para conectar,
+            compartir y encontrarnos con otros.
+        </p>
 
-No.
+        <div
+            class="about-box"
+            style="border-color:rgba(32,184,137,.35);"
+        >
 
-El Entrenamiento Mental es un espacio de acompañamiento y entrenamiento orientado a trabajar sobre la mentalidad, las creencias y la manera en que el emprendedor observa su realidad.
+            <p>
+                La
+                <strong style="color:var(--verde);">
+                    Red de Emprendedores
+                </strong>
+                es un espacio complementario al Gimnasio para Emprendedores.
+            </p>
 
-No reemplaza procesos terapéuticos, psicológicos, psiquiátricos ni ningún otro acompañamiento profesional de salud.
+            <p>
+                No viene a reemplazarlo. Viene a ampliar el ecosistema,
+                generando conexiones, conversaciones y posibilidades de
+                encuentro entre emprendedores.
+            </p>
 
-¿CUÁNTO CUESTAN LOS ENTRENAMIENTOS?
+            <p>
+                Porque crecer también puede significar dejar de intentar
+                resolver todo solo.
+            </p>
 
-Cada modalidad tiene características diferentes.
+        </div>
 
-Por eso, la inversión puede variar según el tipo de entrenamiento y el proceso.
+    </div>
 
-Podemos conversar sobre tu situación y explicarte cuál es la modalidad que mejor se ajusta a tu realidad, junto con toda la información correspondiente.
+</section>
 
-¿DÓNDE SE REALIZAN LOS ENTRENAMIENTOS?
 
-Dependiendo de la modalidad, los encuentros pueden realizarse de manera online o presencial.
+<!-- =========================
+     FORMACIÓN Y EXPERIENCIA
+========================= -->
 
-Al momento de conversar, vas a recibir toda la información correspondiente a la modalidad que te interese.
+<section id="metodo">
 
-¿CUÁNDO ES EL PRÓXIMO EVENTO?
+    <div class="container">
 
-Actualmente, el próximo encuentro es:
+        <div class="section-label">
+            Mi forma de trabajar
+        </div>
 
-PROYECTO YAYUNA
+        <h2 class="section-title">
+            Formación. Experiencia.
+            <span>Realidad.</span>
+        </h2>
 
-MIÉRCOLES 25 DE NOVIEMBRE DE 2026
+        <div class="about-box">
 
-DE 14:00 A 16:00 HS
+            <p>
+                Mi manera de trabajar surge de la combinación entre la
+                formación profesional, la experiencia emprendedora y la
+                realidad concreta que está atravesando cada persona.
+            </p>
 
-YAYUNA MANO
-Av. José de San Martín 2679
-Merlo, Buenos Aires
+            <p>
+                No trabajo desde recetas universales.
+                Cada proceso parte de una realidad concreta:
+                <strong>la tuya.</strong>
+            </p>
 
-Para conocer más información o reservar tu lugar, podés comunicarte directamente por WhatsApp.
+            <p>
+                El objetivo no es decirte qué hacer.
+                Es generar conversaciones y espacios de entrenamiento que
+                te permitan observar lo que hoy está pasando desde nuevas
+                perspectivas.
+            </p>
 
-[ BOTÓN: QUIERO MI LUGAR ]
+        </div>
 
-¿QUERÉS TRABAJAR SOBRE TU REALIDAD?
+    </div>
 
-No importa si hoy tenés todas las respuestas.
+</section>
+  <!-- =========================
+     SER · HACER · TENER
+========================= -->
 
-No importa si todavía no sabés exactamente por dónde empezar.
+<section id="ser-hacer-tener">
 
-Lo importante es que puedas detenerte, mirar lo que está pasando y decidir que querés trabajar sobre aquello que hoy necesita atención.
+    <div class="container">
 
-Podemos conversar.
+        <div class="section-label">
+            Una manera de observar
+        </div>
 
-Contame dónde estás.
+        <h2 class="section-title">
+            SER · HACER ·
+            <span>TENER</span>
+        </h2>
 
-Contame qué está pasando.
+        <p class="intro-text">
+            Muchas veces queremos cambiar nuestros resultados sin detenernos
+            a observar desde dónde estamos actuando.
+        </p>
 
-Y vemos juntos cuál puede ser el próximo paso.
+        <div class="steps">
 
-CRIS ARREGUI
+            <article class="step">
 
-ENTRENADOR DE EMPRENDEDORES
+                <div class="step-number">
+                    SER
+                </div>
 
-FORMACIÓN · EXPERIENCIA · REALIDAD
+                <h3>
+                    Cómo te observás
+                </h3>
 
-[ BOTÓN: HABLAR POR WHATSAPP ]
+                <p>
+                    Tus creencias, tu identidad, tu manera de interpretar
+                    lo que te pasa y el lugar desde el que estás mirando
+                    tu realidad.
+                </p>
 
-[ BOTÓN: SEGUIR EN INSTAGRAM ]
+            </article>
 
-© 2026 CRIS ARREGUI
 
-ENTRENADOR DE EMPRENDEDORES
+            <article class="step">
 
-TODOS LOS DERECHOS RESERVADOS.
+                <div class="step-number">
+                    HACER
+                </div>
+
+                <h3>
+                    Cómo actuás
+                </h3>
+
+                <p>
+                    Las decisiones que tomás, las acciones que repetís
+                    y las conversaciones que sostenés todos los días.
+                </p>
+
+            </article>
+
+
+            <article class="step">
+
+                <div class="step-number">
+                    TENER
+                </div>
+
+                <h3>
+                    Tus resultados
+                </h3>
+
+                <p>
+                    Aquello que hoy estás construyendo como consecuencia
+                    de la manera en que observás y actuás.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROYECTO YAYUNA
+========================= -->
+
+<section id="yayuna">
+
+    <div class="container">
+
+        <div class="section-label">
+            Proyecto Yayuna
+        </div>
+
+        <div class="yayuna-box">
+
+            <div class="section-label">
+                25 de noviembre de 2026
+            </div>
+
+            <h2>
+                Cambiá tu mentalidad
+                para que cambie
+                <span>tu negocio.</span>
+            </h2>
+
+            <p>
+                <strong style="color:var(--dorado-claro);">
+                    Entrenamiento para emprendedores.
+                </strong>
+            </p>
+
+            <p>
+                Muchas veces el mayor límite de un emprendedor no está
+                solamente afuera.
+            </p>
+
+            <p>
+                Está en su manera de pensar, en las creencias que sostiene
+                y en la forma en que interpreta su propia realidad.
+            </p>
+
+            <p>
+                En este encuentro vamos a trabajar sobre las creencias
+                limitantes y sobre aquellas ideas que pueden estar influyendo
+                en tu relación con el dinero, el crecimiento y tus propias
+                posibilidades.
+            </p>
+
+
+            <!-- BOTÓN -->
+
+            <div style="margin-top:35px;">
+
+                <a
+                    href="https://wa.me/5491134631657"
+                    target="_blank"
+                    class="btn btn-gold"
+                >
+                    💬 Quiero mi lugar
+                </a>
+
+            </div>
+
+
+            <!-- CUENTA REGRESIVA -->
+
+            <div id="countdown">
+
+                <div class="count-box">
+
+                    <strong id="days">
+                        00
+                    </strong>
+
+                    <span>
+                        DÍAS
+                    </span>
+
+                </div>
+
+
+                <div class="count-box">
+
+                    <strong id="hours">
+                        00
+                    </strong>
+
+                    <span>
+                        HORAS
+                    </span>
+
+                </div>
+
+
+                <div class="count-box">
+
+                    <strong id="minutes">
+                        00
+                    </strong>
+
+                    <span>
+                        MINUTOS
+                    </span>
+
+                </div>
+
+
+                <div class="count-box">
+
+                    <strong id="seconds">
+                        00
+                    </strong>
+
+                    <span>
+                        SEGUNDOS
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- DATOS DEL EVENTO -->
+
+            <div style="margin-top:45px;">
+
+                <p>
+                    📅
+                    <strong>
+                        Miércoles 25 de noviembre de 2026
+                    </strong>
+                </p>
+
+                <p>
+                    🕑
+                    <strong>
+                        De 14:00 a 16:00 hs
+                    </strong>
+                </p>
+
+                <p>
+                    📍
+                    <strong>
+                        Yayuna Mamo
+                    </strong>
+                    <br>
+                    Av. José de San Martín 2679,
+                    Merlo, Buenos Aires.
+                </p>
+
+                <p style="margin-top:30px;">
+
+                    <span
+                        style="
+                        text-transform:uppercase;
+                        letter-spacing:3px;
+                        font-size:12px;
+                        "
+                    >
+                        Inversión
+                    </span>
+
+                    <br>
+
+                    <strong
+                        style="
+                        color:var(--dorado);
+                        font-size:46px;
+                        "
+                    >
+                        $20.000
+                    </strong>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     DESPUÉS DEL EVENTO
+     PROYECTO YAYUNA
+========================= -->
+
+<section id="despues-yayuna">
+
+    <div class="container">
+
+        <div class="section-label">
+            Proyecto Yayuna
+        </div>
+
+        <h2 class="section-title">
+            ¿Qué pasó en
+            <span>Proyecto Yayuna?</span>
+        </h2>
+
+        <div class="about-box">
+
+            <p>
+                El 25 de noviembre de 2026 vivimos una nueva experiencia
+                junto a emprendedores que decidieron detenerse un momento
+                para mirar su realidad desde otro lugar.
+            </p>
+
+            <p>
+                Este espacio será actualizado después del encuentro con
+                imágenes, videos y contenido de lo que se vivió durante
+                <strong>Proyecto Yayuna.</strong>
+            </p>
+
+            <p>
+                Porque un evento puede terminar.
+                Pero las conversaciones que genera pueden continuar.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FRASE DE CIERRE
+========================= -->
+
+<section id="reflexion">
+
+    <div class="container">
+
+        <div class="section-label">
+            Para pensar
+        </div>
+
+        <h2 class="section-title">
+            Tal vez no necesitás hacer
+            <span>más cosas.</span>
+        </h2>
+
+        <div class="about-box">
+
+            <p style="font-size:22px;">
+
+                Tal vez necesitás detenerte y observar desde qué lugar
+                estás haciendo las cosas que hacés.
+
+            </p>
+
+            <p>
+
+                Porque muchas veces seguimos buscando nuevas estrategias
+                sin mirar la manera en que estamos interpretando nuestra
+                propia realidad.
+
+            </p>
+
+            <p>
+
+                Y ahí puede comenzar un cambio.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+  <!-- =========================
+     PREGUNTAS FRECUENTES
+========================= -->
+
+<section id="preguntas">
+
+    <div class="container">
+
+        <div class="section-label">
+            Preguntas frecuentes
+        </div>
+
+        <h2 class="section-title">
+            Algunas preguntas,
+            <span>sin vueltas.</span>
+        </h2>
+
+        <div class="faq">
+
+            <details>
+
+                <summary>
+                    ¿Cómo sé qué entrenamiento es el indicado para mí?
+                </summary>
+
+                <p>
+                    No necesitás saberlo antes de escribir. Podés contarme qué
+                    está pasando, qué situación estás atravesando o qué sentís
+                    que hoy necesitás trabajar. A partir de ahí vemos qué
+                    modalidad puede tener más sentido para vos.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    ¿Qué diferencia hay entre el Gimnasio Grupal y el Uno a Uno?
+                </summary>
+
+                <p>
+                    El Gimnasio Grupal es un espacio compartido con otros
+                    emprendedores. El Uno a Uno es un proceso individual y
+                    personalizado, pensado para trabajar directamente sobre
+                    tu propia realidad.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    ¿Qué es la Red de Emprendedores?
+                </summary>
+
+                <p>
+                    Es un espacio complementario para conectar emprendedores,
+                    compartir experiencias, generar conversaciones y seguir
+                    creciendo junto a otros. No reemplaza al Gimnasio para
+                    Emprendedores.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    ¿Necesito tener un negocio grande para participar?
+                </summary>
+
+                <p>
+                    No. El tamaño de tu negocio no define si podés participar.
+                    Lo importante es que tengas una realidad sobre la cual
+                    quieras trabajar.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    ¿Qué pasa si no sé exactamente qué necesito?
+                </summary>
+
+                <p>
+                    No pasa nada. No necesitás llegar con todas las respuestas.
+                    Podemos conversar sobre lo que está pasando y observar
+                    juntos por dónde puede comenzar el proceso.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    ¿El Entrenamiento Mental reemplaza una terapia?
+                </summary>
+
+                <p>
+                    No. El Entrenamiento Mental es un espacio orientado a
+                    trabajar sobre la mentalidad y la manera en que el
+                    emprendedor observa su realidad. No reemplaza procesos
+                    terapéuticos, psicológicos, psiquiátricos ni otros
+                    acompañamientos profesionales de salud.
+                </p>
+
+            </details>
+
+
+            <details>
+
+                <summary>
+                    ¿Dónde se realizan los entrenamientos?
+                </summary>
+
+                <p>
+                    Dependiendo de la modalidad, los encuentros pueden
+                    realizarse de manera presencial u online.
+                </p>
+
+            </details>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACTO FINAL
+========================= -->
+
+<section id="contacto">
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <div class="section-label">
+                El próximo paso
+            </div>
+
+            <h2>
+                ¿Querés trabajar sobre
+                <span>tu realidad?</span>
+            </h2>
+
+            <p>
+                No importa si hoy no tenés todas las respuestas.
+            </p>
+
+            <p>
+                Podés detenerte, mirar lo que está pasando y empezar a
+                trabajar sobre aquello que hoy necesita atención.
+            </p>
+
+            <p>
+                Contame dónde estás. Contame qué está pasando.
+                Y vemos juntos cuál puede ser el próximo paso.
+            </p>
+
+
+            <div class="contact-buttons">
+
+                <a
+                    href="https://wa.me/5491134631657"
+                    target="_blank"
+                    class="btn btn-gold"
+                >
+                    💬 Hablar por WhatsApp
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container footer-content">
+
+        <div>
+
+            <div class="logo">
+                CRIS <span>ARREGUI</span>
+            </div>
+
+            <p>
+                Entrenador de Emprendedores
+            </p>
+
+            <p class="footer-frase">
+                Formación · Experiencia · Realidad
+            </p>
+
+        </div>
+
+
+        <div class="footer-copy">
+
+            © 2026 Cris Arregui
+
+            <br>
+
+            Todos los derechos reservados.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     WHATSAPP FLOTANTE
+========================= -->
+
+<a
+    href="https://wa.me/5491134631657"
+    target="_blank"
+    class="whatsapp-float"
+    aria-label="Hablar por WhatsApp"
+>
+    💬
+</a>
+
+
+<!-- =========================
+     JAVASCRIPT
+     TEMPORIZADOR YAYUNA
+========================= -->
+
+<script>
+
+const targetDate = new Date(
+    "2026-11-25T14:00:00-03:00"
+).getTime();
+
+
+const countdownInterval = setInterval(function(){
+
+    const now = new Date().getTime();
+
+    const distance = targetDate - now;
+
+
+    if(distance <= 0){
+
+        clearInterval(countdownInterval);
+
+
+        document.getElementById("countdown").innerHTML =
+
+        `
+        <div
+            style="
+            grid-column:1/-1;
+            text-align:center;
+            padding:25px;
+            color:#d4af37;
+            font-size:20px;
+            font-weight:bold;
+            "
+        >
+
+            El encuentro ya comenzó.
+
+        </div>
+        `;
+
+        return;
+
+    }
+
+
+    const days = Math.floor(
+
+        distance /
+        (1000 * 60 * 60 * 24)
+
+    );
+
+
+    const hours = Math.floor(
+
+        (
+            distance %
+            (1000 * 60 * 60 * 24)
+        )
+        /
+        (1000 * 60 * 60)
+
+    );
+
+
+    const minutes = Math.floor(
+
+        (
+            distance %
+            (1000 * 60 * 60)
+        )
+        /
+        (1000 * 60)
+
+    );
+
+
+    const seconds = Math.floor(
+
+        (
+            distance %
+            (1000 * 60)
+        )
+        /
+        1000
+
+    );
+
+
+    document.getElementById("days").innerText =
+
+        String(days).padStart(2,"0");
+
+
+    document.getElementById("hours").innerText =
+
+        String(hours).padStart(2,"0");
+
+
+    document.getElementById("minutes").innerText =
+
+        String(minutes).padStart(2,"0");
+
+
+    document.getElementById("seconds").innerText =
+
+        String(seconds).padStart(2,"0");
+
+
+},1000);
+
+
+</script>
+
+
+</body>
+</html>
