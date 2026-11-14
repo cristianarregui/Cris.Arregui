@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Cris Arregui | Entrenador de Emprendedores</title>
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Cris Arregui | Entrenador de Emprendedores
+</title>
 
 <style>
+
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
 
 *{
     margin:0;
@@ -14,32 +24,17 @@
     box-sizing:border-box;
 }
 
-:root{
-    --negro:#090909;
-    --negro-suave:#121212;
-    --negro-card:#181818;
-    --dorado:#d4af37;
-    --dorado-claro:#f0d675;
-    --blanco:#f5f5f5;
-    --gris:#b8b8b8;
-    --borde:#2a2a2a;
-
-    --azul:#3b82f6;
-    --rojo:#e53935;
-    --violeta:#9c5ce6;
-    --naranja:#f57c00;
-    --verde:#20b889;
-}
-
 html{
     scroll-behavior:smooth;
+    overflow-x:hidden;
 }
 
 body{
-    background:var(--negro);
-    color:var(--blanco);
+    background:#090909;
+    color:#f5f5f5;
     font-family:Arial, Helvetica, sans-serif;
     line-height:1.6;
+    overflow-x:hidden;
 }
 
 a{
@@ -53,53 +48,126 @@ a{
 }
 
 /* =========================
+   COLORES
+========================= */
+
+:root{
+
+    --black:#090909;
+    --dark:#121212;
+    --card:#181818;
+
+    --gold:#d4af37;
+    --gold-light:#f0d675;
+
+    --white:#f5f5f5;
+    --gray:#b8b8b8;
+
+    --border:#2a2a2a;
+
+    --blue:#3b82f6;
+    --red:#e53935;
+    --violet:#9c5ce6;
+    --orange:#f57c00;
+    --green:#20b889;
+
+}
+
+/* =========================
    HEADER
 ========================= */
 
 header{
+
     position:sticky;
     top:0;
+
     z-index:1000;
 
-    background:rgba(9,9,9,.96);
-    backdrop-filter:blur(10px);
+    background:rgba(9,9,9,.97);
 
-    border-bottom:1px solid var(--borde);
+    border-bottom:1px solid var(--border);
+
 }
 
 .navbar{
-    min-height:82px;
+
+    min-height:72px;
 
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
+
+    gap:20px;
+
 }
 
 .logo{
+
     font-family:Georgia, "Times New Roman", serif;
-    font-size:clamp(24px,4vw,34px);
+
+    font-size:26px;
+
     font-weight:bold;
+
     letter-spacing:1px;
+
+    white-space:nowrap;
+
 }
 
 .logo span{
-    color:var(--dorado);
+    color:var(--gold);
 }
 
+/* BOTÓN DEL MENÚ */
+
+.menu-toggle{
+
+    display:none;
+
+    background:none;
+
+    border:1px solid var(--gold);
+
+    color:var(--gold);
+
+    padding:9px 13px;
+
+    border-radius:8px;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+}
+
+/* MENÚ */
+
 nav{
+
     display:flex;
-    gap:24px;
+
     align-items:center;
+
+    gap:18px;
+
 }
 
 nav a{
-    color:var(--gris);
-    font-size:14px;
+
+    color:var(--gray);
+
+    font-size:13px;
+
     transition:.3s;
+
 }
 
 nav a:hover{
-    color:var(--dorado);
+    color:var(--gold);
 }
 
 /* =========================
@@ -107,104 +175,180 @@ nav a:hover{
 ========================= */
 
 .btn{
+
     display:inline-flex;
+
     align-items:center;
+
     justify-content:center;
 
-    padding:16px 26px;
+    text-align:center;
+
+    padding:16px 25px;
 
     border-radius:50px;
 
     font-weight:bold;
 
     transition:.3s;
+
+    min-height:52px;
+
 }
 
 .btn:hover{
-    transform:translateY(-2px);
+
+    transform:translateY(-3px);
+
 }
 
 .btn-gold{
-    background:var(--dorado);
+
+    background:var(--gold);
+
     color:#111;
+
 }
 
 .btn-outline{
-    border:1px solid rgba(212,175,55,.7);
-    color:var(--dorado-claro);
+
+    border:1px solid var(--gold);
+
+    color:var(--gold-light);
+
+}
+
+.btn-green{
+
+    background:var(--green);
+
+    color:#07110d;
+
 }
 
 /* =========================
-   HERO
+   HERO / PORTADA
 ========================= */
 
 .hero{
+
     min-height:88vh;
 
     display:flex;
+
     align-items:center;
 
-    padding:80px 0;
+    padding:90px 0;
 
     background:
+
     radial-gradient(
-        circle at 75% 25%,
-        rgba(212,175,55,.12),
+        circle at 80% 20%,
+        rgba(212,175,55,.16),
         transparent 30%
     ),
+
+    radial-gradient(
+        circle at 20% 80%,
+        rgba(212,175,55,.06),
+        transparent 35%
+    ),
+
     linear-gradient(
         180deg,
         #090909,
-        #10100e
+        #11100d
     );
+
 }
 
 .hero-content{
-    max-width:900px;
+
+    max-width:950px;
+
 }
 
 .eyebrow,
 .section-label{
-    color:var(--dorado);
+
+    color:var(--gold);
 
     text-transform:uppercase;
 
-    letter-spacing:4px;
+    letter-spacing:3px;
 
-    font-size:13px;
+    font-size:12px;
+
     font-weight:bold;
 
-    margin-bottom:20px;
+    margin-bottom:18px;
+
 }
 
 .hero h1{
+
     font-family:Georgia, "Times New Roman", serif;
 
-    font-size:clamp(52px,8vw,92px);
+    font-size:clamp(48px,8vw,90px);
 
-    line-height:1;
+    line-height:1.05;
 
-    margin-bottom:28px;
+    margin-bottom:25px;
+
 }
 
 .hero h1 span{
-    color:var(--dorado);
+    color:var(--gold);
+}
+
+.hero-name{
+
+    font-size:clamp(25px,4vw,40px);
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+    margin-bottom:5px;
+
+}
+
+.hero-profession{
+
+    color:var(--gold);
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-size:clamp(13px,2vw,18px);
+
+    font-weight:bold;
+
+    margin-bottom:28px;
+
 }
 
 .hero-text{
-    color:var(--gris);
+
+    max-width:750px;
+
+    color:var(--gray);
 
     font-size:clamp(18px,2vw,22px);
 
-    max-width:760px;
-
     margin-bottom:35px;
+
 }
 
 .hero-buttons{
+
     display:flex;
+
     gap:15px;
+
     flex-wrap:wrap;
+
 }
 
 /* =========================
@@ -216,51 +360,59 @@ section{
 }
 
 .section-title{
+
     font-family:Georgia, "Times New Roman", serif;
 
-    font-size:clamp(42px,6vw,70px);
+    font-size:clamp(40px,6vw,68px);
 
     line-height:1.1;
 
-    max-width:900px;
+    margin-bottom:25px;
 
-    margin-bottom:28px;
+    max-width:950px;
+
 }
 
 .section-title span{
-    color:var(--dorado);
+    color:var(--gold);
 }
 
 .intro-text{
-    color:var(--gris);
 
-    font-size:20px;
+    color:var(--gray);
+
+    font-size:19px;
 
     max-width:850px;
+
 }
 
 /* =========================
-   CAJAS
+   CAJAS GENERALES
 ========================= */
 
 .about-box{
-    margin-top:45px;
 
-    background:var(--negro-suave);
+    margin-top:40px;
 
-    border:1px solid var(--borde);
+    background:var(--dark);
 
-    border-radius:28px;
+    border:1px solid var(--border);
 
-    padding:45px;
+    border-radius:25px;
+
+    padding:clamp(28px,5vw,48px);
+
 }
 
 .about-box p{
-    color:var(--gris);
+
+    color:var(--gray);
 
     font-size:18px;
 
     margin-bottom:20px;
+
 }
 
 .about-box p:last-child{
@@ -268,99 +420,7 @@ section{
 }
 
 .about-box strong{
-    color:var(--blanco);
-}
-
-/* =========================
-   TARJETAS ENTRENAMIENTOS
-========================= */
-
-.training-grid{
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:25px;
-
-    margin-top:50px;
-}
-
-.training-card{
-    background:var(--negro-card);
-
-    border:1px solid var(--borde);
-
-    border-top:5px solid var(--dorado);
-
-    border-radius:28px;
-
-    padding:40px;
-
-    min-height:370px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:space-between;
-}
-
-.training-card.blue{
-    border-top-color:var(--azul);
-}
-
-.training-card.red{
-    border-top-color:var(--rojo);
-}
-
-.training-card.violet{
-    border-top-color:var(--violeta);
-}
-
-.training-card.orange{
-    border-top-color:var(--naranja);
-}
-
-.training-card.green{
-    border-top-color:var(--verde);
-}
-
-.card-tag{
-    color:var(--dorado);
-
-    text-transform:uppercase;
-
-    letter-spacing:3px;
-
-    font-size:12px;
-
-    font-weight:bold;
-
-    margin-bottom:18px;
-}
-
-.training-card h3{
-    font-family:Georgia, "Times New Roman", serif;
-
-    font-size:clamp(32px,4vw,42px);
-
-    line-height:1.1;
-
-    margin-bottom:20px;
-}
-
-.training-card p{
-    color:var(--gris);
-
-    font-size:17px;
-}
-
-.card-link{
-    margin-top:30px;
-
-    color:var(--dorado-claro);
-
-    font-weight:bold;
+    color:var(--white);
 }
 
 /* =========================
@@ -373,28 +433,64 @@ section{
 
 <body>
 
+
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
 
     <div class="container navbar">
 
         <a href="#inicio" class="logo">
+
             CRIS <span>ARREGUI</span>
+
         </a>
 
-        <nav>
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Abrir menú"
+        >
+            ☰
+        </button>
+
+
+        <nav id="mainNav">
+
             <a href="#inicio">Inicio</a>
-            <a href="#entrenamientos">Entrenamientos</a>
-            <a href="#red">Red</a>
-            <a href="#yayuna">Yayuna</a>
-            <a href="#preguntas">Preguntas</a>
-            <a href="#contacto">Contacto</a>
+
+            <a href="#quien-soy">
+                Quién soy
+            </a>
+
+            <a href="#recorrido">
+                Mi recorrido
+            </a>
+
+            <a href="#entrenamientos">
+                Entrenamientos
+            </a>
+
+            <a href="#red">
+                Red
+            </a>
+
+            <a href="#yayuna">
+                Yayuna
+            </a>
+
         </nav>
 
     </div>
 
 </header>
 
+
 <main id="inicio">
+
 
 <!-- =========================
      PORTADA
@@ -406,33 +502,75 @@ section{
 
         <div class="hero-content">
 
+
             <div class="eyebrow">
-                Cris Arregui | Entrenador de Emprendedores
+
+                Cris Arregui
+
             </div>
 
+
             <h1>
-                Tu negocio también necesita
-                <span>entrenamiento.</span>
+
+                Para hacer crecer
+                <span>
+                    tu negocio,
+                </span>
+
+                primero tenés que
+                <span>
+                    crecer vos.
+                </span>
+
             </h1>
 
+
+            <div class="hero-name">
+
+                CRIS ARREGUI
+
+            </div>
+
+
+            <div class="hero-profession">
+
+                ENTRENADOR DE EMPRENDEDORES
+
+            </div>
+
+
             <p class="hero-text">
-                No todos los emprendedores están atravesando el mismo momento.
-                Algunos necesitan ordenar su negocio. Otros necesitan tomar
-                decisiones. Y otros necesitan frenar, mirar su realidad y trabajar
-                sobre su manera de pensar.
+
+                Te acompaño a hacer crecer tu mentalidad
+                para poder hacer crecer tu negocio.
+
             </p>
+
 
             <div class="hero-buttons">
 
-                <a href="#entrenamientos" class="btn btn-gold">
+                <a
+                    href="#entrenamientos"
+                    class="btn btn-gold"
+                >
+
                     Ver entrenamientos
+
                 </a>
 
-                <a href="#contacto" class="btn btn-outline">
-                    Hablemos
+
+                <a
+                    href="https://wa.me/5491134631657"
+                    target="_blank"
+                    class="btn btn-outline"
+                >
+
+                    💬 Hablemos
+
                 </a>
 
             </div>
+
 
         </div>
 
@@ -440,65 +578,1003 @@ section{
 
 </section>
 
+
 <!-- =========================
-     GIMNASIO PARA EMPRENDEDORES
+     QUIÉN SOY
 ========================= -->
 
-<section id="gimnasio">
+<section id="quien-soy">
 
     <div class="container">
 
+
         <div class="section-label">
-            Gimnasio para Emprendedores
+
+            Quién soy
+
         </div>
 
+
         <h2 class="section-title">
-            Un espacio para
-            <span>entrenar tu realidad.</span>
+
+            No hablo solamente
+            desde la teoría.
+
+            <span>
+                También emprendo.
+            </span>
+
         </h2>
+
 
         <div class="about-box">
 
             <p>
-                El Gimnasio para Emprendedores nace de una idea simple:
+
+                Soy
                 <strong>
-                    un emprendedor no necesita solamente información.
+                    Cris Arregui.
                 </strong>
-            </p>
 
-            <p>
-                Necesita espacios para detenerse, pensar, mirar lo que está
-                pasando y trabajar sobre su propia realidad.
-            </p>
-
-            <p>
-                Acá no venís a buscar fórmulas mágicas.
-                Venís a entrenar.
-            </p>
-
-            <p>
-                A observar tu negocio desde otro lugar, cuestionar lo que hoy
-                te está frenando y generar movimiento sobre aquello que sentís
-                que necesita atención.
-            </p>
-
-            <p>
+                Emprendedor, Coach y
                 <strong>
-                    No todos necesitan el mismo entrenamiento.
+                    Entrenador de Emprendedores.
                 </strong>
+
             </p>
 
+
             <p>
-                Por eso existen distintas modalidades, pensadas según el momento
-                y la realidad que está atravesando cada emprendedor.
+
+                Mi trabajo nace de una combinación que considero
+                fundamental: la formación profesional, la experiencia
+                y la realidad concreta de emprender.
+
+            </p>
+
+
+            <p>
+
+                Porque una cosa es hablar de emprendedores desde
+                afuera.
+
+                Y otra muy diferente es conocer lo que significa
+                tomar decisiones, atravesar momentos difíciles,
+                sostener un negocio y volver a empezar.
+
+            </p>
+
+
+            <p>
+
+                Hoy acompaño a emprendedores a observar su realidad,
+                trabajar sobre su mentalidad y generar movimiento
+                sobre aquello que necesita cambiar.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+<!-- =========================
+     MI RECORRIDO
+========================= -->
+
+<section id="recorrido">
+
+    <div class="container">
+
+
+        <div class="section-label">
+
+            Mi recorrido
+
+        </div>
+
+
+        <h2 class="section-title">
+
+            Antes de entrenar
+            emprendedores,
+
+            <span>
+                fui construyendo
+                mi propio camino.
+            </span>
+
+        </h2>
+
+
+        <p class="intro-text">
+
+            Mi experiencia no comenzó en un aula.
+            Comenzó emprendiendo.
+
+        </p>
+
+
+        <div class="journey-grid">
+
+
+            <!-- PRIMERA ETAPA -->
+
+            <article class="journey-card">
+
+                <div class="journey-number">
+
+                    01
+
+                </div>
+
+
+                <h3>
+
+                    Empezar
+
+                </h3>
+
+
+                <p>
+
+                    Como muchos emprendedores, empecé construyendo
+                    diferentes negocios y aprendiendo en el camino.
+
+                </p>
+
+
+                <ul>
+
+                    <li>🏪 Kiosco</li>
+
+                    <li>🛒 Almacén</li>
+
+                    <li>🍗 Pollería</li>
+
+                    <li>🥬 Verdulería</li>
+
+                    <li>🚀 Otros emprendimientos</li>
+
+                </ul>
+
+
+                <p>
+
+                    Cada experiencia tuvo sus propios desafíos,
+                    errores, aprendizajes y decisiones.
+
+                </p>
+
+            </article>
+
+
+            <!-- SEGUNDA ETAPA -->
+
+            <article class="journey-card journey-highlight">
+
+                <div class="journey-number">
+
+                    02
+
+                </div>
+
+
+                <h3>
+
+                    Construir
+
+                </h3>
+
+
+                <p>
+
+                    Con el tiempo llegó uno de los proyectos más
+                    importantes de mi recorrido emprendedor:
+
+                </p>
+
+
+                <h4>
+
+                    CyC Hogar
+
+                </h4>
+
+
+                <p>
+
+                    Un negocio construido desde la experiencia,
+                    el trabajo diario y el desafío permanente
+                    de sostener y hacer crecer una empresa.
+
+                </p>
+
+
+                <p>
+
+                    Porque emprender no es solamente tener una idea.
+
+                    Es tomar decisiones, adaptarse, resolver
+                    problemas y seguir adelante incluso cuando
+                    las cosas no salen como esperabas.
+
+                </p>
+
+
+                <a
+                    href="https://www.instagram.com/cyc_.hogar?vrfl=MW9yZXZpend0enh4MA=="
+                    target="_blank"
+                    class="btn btn-gold journey-button"
+                >
+
+                    📸 Conocé CyC Hogar
+
+                </a>
+
+            </article>
+
+
+            <!-- TERCERA ETAPA -->
+
+            <article class="journey-card">
+
+                <div class="journey-number">
+
+                    03
+
+                </div>
+
+
+                <h3>
+
+                    Formarme
+
+                </h3>
+
+
+                <p>
+
+                    La experiencia emprendedora me llevó también
+                    a buscar herramientas para comprender mejor
+                    a las personas, las conversaciones, las
+                    decisiones y la manera en que observamos
+                    nuestra realidad.
+
+                </p>
+
+
+                <div class="credentials-list">
+
+                    <div class="credential">
+
+                        <strong>
+                            Coach Ontológico
+                        </strong>
+
+                    </div>
+
+
+                    <div class="credential">
+
+                        <strong>
+                            Coach Ejecutivo
+                        </strong>
+
+                    </div>
+
+
+                    <div class="credential">
+
+                        <strong>
+                            Certificación ICF Level 2
+                        </strong>
+
+                    </div>
+
+
+                    <div class="credential">
+
+                        <strong>
+                            Asesor de Empresas
+                        </strong>
+
+                    </div>
+
+
+                    <div class="credential">
+
+                        <strong>
+                            Speaker
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- CUARTA ETAPA -->
+
+            <article class="journey-card journey-final">
+
+                <div class="journey-number">
+
+                    04
+
+                </div>
+
+
+                <h3>
+
+                    Integrar
+
+                </h3>
+
+
+                <p>
+
+                    En algún momento entendí que mi experiencia
+                    emprendedora y mi formación profesional no
+                    eran caminos separados.
+
+                </p>
+
+
+                <p>
+
+                    Podían integrarse.
+
+                </p>
+
+
+                <p>
+
+                    Y desde ahí comenzó una nueva etapa:
+
+                </p>
+
+
+                <h4>
+
+                    ENTRENAR
+                    <br>
+                    EMPRENDEDORES
+
+                </h4>
+
+
+                <p>
+
+                    Acompañar a otros emprendedores a mirar su
+                    realidad, trabajar sobre su mentalidad y
+                    generar movimiento en aquello que hoy
+                    necesita cambiar.
+
+                </p>
+
+            </article>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FORMACIÓN + EXPERIENCIA
+========================= -->
+
+<section id="formacion">
+
+    <div class="container">
+
+
+        <div class="section-label">
+
+            Formación + experiencia
+
+        </div>
+
+
+        <h2 class="section-title">
+
+            La teoría es importante.
+
+            <span>
+                La realidad también.
+            </span>
+
+        </h2>
+
+
+        <div class="about-box">
+
+            <p>
+
+                Creo profundamente en la formación.
+
+                Por eso me formé como
+                <strong>
+                    Coach Ontológico y Coach Ejecutivo
+                </strong>
+                y continué desarrollando mi camino profesional.
+
+            </p>
+
+
+            <p>
+
+                Pero también creo que el mundo emprendedor
+                se entiende de una manera diferente cuando
+                lo vivís desde adentro.
+
+            </p>
+
+
+            <p>
+
+                Cuando tenés que abrir un negocio.
+
+                Cuando las ventas no alcanzan.
+
+                Cuando hay que pagar cuentas.
+
+                Cuando una decisión puede cambiar el rumbo
+                de todo.
+
+            </p>
+
+
+            <p>
+
+                Por eso, mi forma de trabajar nace de tres
+                lugares:
+
+            </p>
+
+
+            <div class="three-pillars">
+
+                <div class="pillar">
+
+                    <strong>
+
+                        FORMACIÓN
+
+                    </strong>
+
+
+                    <span>
+
+                        Herramientas y preparación profesional.
+
+                    </span>
+
+                </div>
+
+
+                <div class="pillar">
+
+                    <strong>
+
+                        EXPERIENCIA
+
+                    </strong>
+
+
+                    <span>
+
+                        El camino real de emprender.
+
+                    </span>
+
+                </div>
+
+
+                <div class="pillar">
+
+                    <strong>
+
+                        REALIDAD
+
+                    </strong>
+
+
+                    <span>
+
+                        Lo que hoy está pasando en tu negocio.
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <p style="margin-top:35px;">
+
+                Porque no todos los emprendedores necesitan
+                lo mismo.
+
+                Y tampoco todos están atravesando el mismo
+                momento.
+
             </p>
 
         </div>
 
+
     </div>
 
-</section>q
-  <!-- =========================
+</section>
+
+
+
+<!-- =========================
+     INSTAGRAM
+========================= -->
+
+<section id="instagram">
+
+    <div class="container">
+
+
+        <div class="section-label">
+
+            Conectemos
+
+        </div>
+
+
+        <h2 class="section-title">
+
+            También podés seguir
+            <span>
+                mi recorrido.
+            </span>
+
+        </h2>
+
+
+        <div class="social-grid">
+
+
+            <!-- INSTAGRAM CRIS -->
+
+            <article class="social-card">
+
+                <div class="social-icon">
+
+                    📸
+
+                </div>
+
+
+                <h3>
+
+                    Cris Arregui
+
+                </h3>
+
+
+                <p>
+
+                    Reflexiones, mentalidad, emprendimiento,
+                    entrenamientos y contenido para quienes
+                    buscan seguir creciendo.
+
+                </p>
+
+
+                <a
+                    href="https://www.instagram.com/cris.arre?rpxt=MTNzdG1nejRkMDZyYw=="
+                    target="_blank"
+                    class="btn btn-outline"
+                >
+
+                    Seguir en Instagram
+
+                </a>
+
+            </article>
+
+
+            <!-- INSTAGRAM CYC -->
+
+            <article class="social-card">
+
+                <div class="social-icon">
+
+                    🏠
+
+                </div>
+
+
+                <h3>
+
+                    CyC Hogar
+
+                </h3>
+
+
+                <p>
+
+                    Conocé uno de los proyectos que forma
+                    parte de mi recorrido como emprendedor.
+
+                </p>
+
+
+                <a
+                    href="https://www.instagram.com/cyc_.hogar?vrfl=MW9yZXZpend0enh4MA=="
+                    target="_blank"
+                    class="btn btn-gold"
+                >
+
+                    Conocé CyC Hogar
+
+                </a>
+
+            </article>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ESTILOS DE ESTA SECCIÓN
+========================= -->
+
+<style>
+
+.journey-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,minmax(0,1fr));
+
+    gap:25px;
+
+    margin-top:50px;
+
+}
+
+
+.journey-card{
+
+    background:var(--dark);
+
+    border:1px solid var(--border);
+
+    border-radius:25px;
+
+    padding:38px;
+
+}
+
+
+.journey-highlight{
+
+    border-color:rgba(212,175,55,.55);
+
+}
+
+
+.journey-final{
+
+    background:
+
+    radial-gradient(
+        circle at top right,
+        rgba(212,175,55,.12),
+        transparent 45%
+    ),
+
+    var(--dark);
+
+}
+
+
+.journey-number{
+
+    color:var(--gold);
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+
+    margin-bottom:20px;
+
+}
+
+
+.journey-card h3{
+
+    font-family:Georgia,serif;
+
+    font-size:36px;
+
+    margin-bottom:20px;
+
+}
+
+
+.journey-card h4{
+
+    color:var(--gold);
+
+    font-family:Georgia,serif;
+
+    font-size:32px;
+
+    margin:20px 0;
+
+}
+
+
+.journey-card p{
+
+    color:var(--gray);
+
+    margin-bottom:18px;
+
+}
+
+
+.journey-card ul{
+
+    list-style:none;
+
+    margin:25px 0;
+
+}
+
+
+.journey-card li{
+
+    padding:10px 0;
+
+    border-bottom:1px solid var(--border);
+
+    color:var(--white);
+
+}
+
+
+.journey-button{
+
+    margin-top:15px;
+
+}
+
+
+.credentials-list{
+
+    display:grid;
+
+    gap:10px;
+
+    margin-top:25px;
+
+}
+
+
+.credential{
+
+    padding:13px 16px;
+
+    border-left:3px solid var(--gold);
+
+    background:#101010;
+
+    color:var(--white);
+
+}
+
+
+.three-pillars{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,minmax(0,1fr));
+
+    gap:15px;
+
+    margin-top:30px;
+
+}
+
+
+.pillar{
+
+    background:#101010;
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:22px;
+
+}
+
+
+.pillar strong{
+
+    display:block;
+
+    color:var(--gold);
+
+    letter-spacing:1px;
+
+    margin-bottom:10px;
+
+}
+
+
+.pillar span{
+
+    color:var(--gray);
+
+    font-size:14px;
+
+}
+
+
+.social-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,minmax(0,1fr));
+
+    gap:25px;
+
+    margin-top:45px;
+
+}
+
+
+.social-card{
+
+    background:var(--dark);
+
+    border:1px solid var(--border);
+
+    border-radius:25px;
+
+    padding:38px;
+
+}
+
+
+.social-icon{
+
+    font-size:34px;
+
+    margin-bottom:20px;
+
+}
+
+
+.social-card h3{
+
+    font-family:Georgia,serif;
+
+    font-size:30px;
+
+    margin-bottom:15px;
+
+}
+
+
+.social-card p{
+
+    color:var(--gray);
+
+    margin-bottom:25px;
+
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media(max-width:768px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+
+    nav{
+
+        display:none;
+
+        position:absolute;
+
+        top:73px;
+
+        left:0;
+
+        right:0;
+
+        width:100%;
+
+        background:#090909;
+
+        border-bottom:1px solid var(--border);
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:0;
+
+        padding:10px 5% 20px;
+
+    }
+
+
+    nav.active{
+        display:flex;
+    }
+
+
+    nav a{
+
+        display:block;
+
+        padding:15px 0;
+
+        border-bottom:1px solid #222;
+
+    }
+
+
+    .journey-grid,
+    .social-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .three-pillars{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .journey-card{
+
+        padding:28px;
+
+    }
+
+}
+
+    </style>
+    <!-- =========================
      ENTRENAMIENTOS
 ========================= -->
 
@@ -507,39 +1583,56 @@ section{
     <div class="container">
 
         <div class="section-label">
-            Modalidades de entrenamiento
+            Entrenamientos
         </div>
 
         <h2 class="section-title">
-            No todos necesitan el mismo
-            <span>entrenamiento.</span>
+            ¿Qué tipo de entrenamiento
+            <span>necesitás hoy?</span>
         </h2>
 
         <p class="intro-text">
-            Por eso existen diferentes modalidades, pensadas para acompañar
-            distintos momentos, necesidades y realidades.
+            No todos los emprendedores están atravesando el mismo momento.
+            Por eso, no todos necesitan el mismo tipo de entrenamiento.
         </p>
+
 
         <div class="training-grid">
 
-            <!-- GIMNASIO GRUPAL -->
 
-            <article class="training-card">
+            <!-- =========================
+                 GIMNASIO GRUPAL
+            ========================= -->
 
-                <div>
+            <article class="training-card training-gym">
+
+                <div class="card-content">
 
                     <div class="card-tag">
-                        90 días · Grupal
+                        ENTRENAMIENTO GRUPAL · 90 DÍAS
                     </div>
 
                     <h3>
-                        Gimnasio Grupal
+                        Gimnasio para Emprendedores
                     </h3>
 
                     <p>
-                        Un espacio compartido con otros emprendedores para
-                        entrenar, conversar, observar la realidad y trabajar
-                        sobre situaciones concretas del camino emprendedor.
+                        Un espacio de entrenamiento pensado para emprendedores
+                        que quieren trabajar sobre su negocio, sus decisiones
+                        y su manera de enfrentar los desafíos del día a día.
+                    </p>
+
+                    <p>
+                        Durante el proceso, compartís el camino con otros
+                        emprendedores, participando de entrenamientos,
+                        conversaciones y espacios donde cada uno puede mirar
+                        su propia realidad desde nuevas perspectivas.
+                    </p>
+
+                    <p>
+                        Porque muchas veces no necesitás solamente más
+                        información. Necesitás detenerte, observar y trabajar
+                        sobre aquello que hoy está pasando.
                     </p>
 
                 </div>
@@ -547,22 +1640,24 @@ section{
                 <a
                     href="https://wa.me/5491134631657"
                     target="_blank"
-                    class="card-link"
+                    class="btn btn-training"
                 >
-                    Quiero saber más →
+                    Quiero saber más
                 </a>
 
             </article>
 
 
-            <!-- UNO A UNO -->
+            <!-- =========================
+                 UNO A UNO
+            ========================= -->
 
-            <article class="training-card blue">
+            <article class="training-card training-one">
 
-                <div>
+                <div class="card-content">
 
                     <div class="card-tag">
-                        90 días · Personalizado
+                        PROCESO PERSONALIZADO · 90 DÍAS
                     </div>
 
                     <h3>
@@ -570,10 +1665,21 @@ section{
                     </h3>
 
                     <p>
-                        Un proceso individual y personalizado para trabajar
-                        directamente sobre tu realidad, tu negocio, tus
-                        decisiones y aquello que vaya apareciendo durante
-                        el proceso.
+                        Un proceso individual para trabajar directamente
+                        sobre tu realidad como emprendedor.
+                    </p>
+
+                    <p>
+                        Cada encuentro está pensado para observar qué está
+                        pasando hoy, qué conversaciones necesitás tener,
+                        qué decisiones estás postergando y dónde necesitás
+                        generar movimiento.
+                    </p>
+
+                    <p>
+                        No es un proceso armado de manera rígida.
+                        El recorrido se construye encuentro tras encuentro,
+                        trabajando sobre lo que realmente necesita atención.
                     </p>
 
                 </div>
@@ -581,22 +1687,24 @@ section{
                 <a
                     href="https://wa.me/5491134631657"
                     target="_blank"
-                    class="card-link"
+                    class="btn btn-training"
                 >
-                    Quiero saber más →
+                    Quiero trabajar Uno a Uno
                 </a>
 
             </article>
 
 
-            <!-- EMERGENCIA -->
+            <!-- =========================
+                 EMERGENCIA
+            ========================= -->
 
-            <article class="training-card red">
+            <article class="training-card training-emergency">
 
-                <div>
+                <div class="card-content">
 
                     <div class="card-tag">
-                        Situación puntual
+                        SITUACIÓN CONCRETA · ACCIÓN
                     </div>
 
                     <h3>
@@ -604,10 +1712,21 @@ section{
                     </h3>
 
                     <p>
-                        Para esos momentos en los que algo necesita atención.
-                        Una situación concreta, un problema, una decisión o
-                        una realidad que hoy sentís que no podés seguir
-                        postergando.
+                        Hay momentos en los que sentís que algo necesita
+                        atención ahora.
+                    </p>
+
+                    <p>
+                        Puede ser una situación puntual, una decisión difícil,
+                        un problema que apareció en el negocio o una realidad
+                        que sentís que ya no podés seguir postergando.
+                    </p>
+
+                    <p>
+                        El proceso comienza con una conversación de diagnóstico
+                        para observar la situación y entender qué está pasando.
+                        A partir de ahí se define cómo avanzar sobre esa
+                        realidad concreta.
                     </p>
 
                 </div>
@@ -615,22 +1734,24 @@ section{
                 <a
                     href="https://wa.me/5491134631657"
                     target="_blank"
-                    class="card-link"
+                    class="btn btn-training"
                 >
-                    Quiero saber más →
+                    Necesito ayuda ahora
                 </a>
 
             </article>
 
 
-            <!-- ENTRENAMIENTO MENTAL -->
+            <!-- =========================
+                 ENTRENAMIENTO MENTAL
+            ========================= -->
 
-            <article class="training-card violet">
+            <article class="training-card training-mental">
 
-                <div>
+                <div class="card-content">
 
                     <div class="card-tag">
-                        Mentalidad · Ser
+                        MENTALIDAD · OBSERVADOR · CRECIMIENTO
                     </div>
 
                     <h3>
@@ -638,10 +1759,28 @@ section{
                     </h3>
 
                     <p>
-                        Un espacio profundo para trabajar sobre la manera en
-                        que observás tu realidad, tus creencias, tus límites,
-                        tus miedos y aquellas conversaciones internas que
-                        pueden estar influyendo en tus decisiones.
+                        Muchas veces el límite no está solamente afuera.
+                    </p>
+
+                    <p>
+                        También puede estar en la manera en que observamos
+                        nuestra realidad, en las creencias que sostenemos,
+                        en nuestros miedos y en las conversaciones que
+                        tenemos con nosotros mismos.
+                    </p>
+
+                    <p>
+                        Este es un espacio de acompañamiento profundo para
+                        trabajar sobre la mentalidad del emprendedor y sobre
+                        aquello que puede estar influyendo en su manera de
+                        decidir, actuar y avanzar.
+                    </p>
+
+                    <p>
+                        <strong>
+                            No reemplaza procesos terapéuticos, psicológicos
+                            ni otros acompañamientos profesionales de salud.
+                        </strong>
                     </p>
 
                 </div>
@@ -649,32 +1788,49 @@ section{
                 <a
                     href="https://wa.me/5491134631657"
                     target="_blank"
-                    class="card-link"
+                    class="btn btn-training"
                 >
-                    Quiero saber más →
+                    Quiero entrenar mi mentalidad
                 </a>
 
             </article>
 
 
-            <!-- FULL -->
+            <!-- =========================
+                 FULL
+            ========================= -->
 
-            <article class="training-card orange">
+            <article class="training-card training-full">
 
-                <div>
+                <div class="card-content">
 
                     <div class="card-tag">
-                        Intensivo · 10 jornadas
+                        ENTRENAMIENTO INTENSIVO · 10 JORNADAS
                     </div>
 
                     <h3>
-                        Entrenamiento Full
+                        Entrenamiento FULL
                     </h3>
 
                     <p>
-                        Un proceso intensivo para trabajar de manera enfocada
-                        sobre una realidad concreta, generar claridad y avanzar
-                        sobre aquello que hoy necesita movimiento.
+                        Una experiencia intensiva para quienes necesitan
+                        trabajar de manera enfocada sobre su realidad.
+                    </p>
+
+                    <p>
+                        Son 10 jornadas de entrenamiento pensadas para
+                        detenerse, ordenar, observar y generar movimiento
+                        sobre aquello que hoy necesita atención.
+                    </p>
+
+                    <p>
+                        Puede ser el momento de salir de una situación
+                        complicada o de comenzar una nueva etapa.
+                    </p>
+
+                    <p>
+                        La última jornada tiene un cierre especial para
+                        revisar el proceso y mirar hacia adelante.
                     </p>
 
                 </div>
@@ -682,22 +1838,24 @@ section{
                 <a
                     href="https://wa.me/5491134631657"
                     target="_blank"
-                    class="card-link"
+                    class="btn btn-training"
                 >
-                    Quiero saber más →
+                    Quiero el entrenamiento FULL
                 </a>
 
             </article>
 
 
-            <!-- MESA REDONDA -->
+            <!-- =========================
+                 MESA REDONDA
+            ========================= -->
 
-            <article class="training-card green">
+            <article class="training-card training-round">
 
-                <div>
+                <div class="card-content">
 
                     <div class="card-tag">
-                        Grupo reducido · 90 días
+                        GRUPO REDUCIDO · 90 DÍAS
                     </div>
 
                     <h3>
@@ -705,10 +1863,21 @@ section{
                     </h3>
 
                     <p>
-                        Una experiencia exclusiva para un grupo reducido de
-                        emprendedores que buscan profundidad, conversación,
-                        intercambio de miradas y trabajo sobre sus propias
-                        realidades.
+                        Una experiencia exclusiva para un grupo reducido
+                        de emprendedores que buscan profundidad,
+                        conversación y nuevas miradas.
+                    </p>
+
+                    <p>
+                        Cada participante llega con su propia realidad,
+                        pero el valor también está en escuchar otras
+                        experiencias y descubrir que una conversación
+                        puede abrir posibilidades que antes no veías.
+                    </p>
+
+                    <p>
+                        Un espacio más íntimo para pensar, compartir,
+                        cuestionar y trabajar junto a otros emprendedores.
                     </p>
 
                 </div>
@@ -716,9 +1885,9 @@ section{
                 <a
                     href="https://wa.me/5491134631657"
                     target="_blank"
-                    class="card-link"
+                    class="btn btn-training"
                 >
-                    Quiero saber más →
+                    Quiero conocer Mesa Redonda
                 </a>
 
             </article>
@@ -729,84 +1898,6 @@ section{
 
 </section>
 
-
-<!-- =========================
-     CÓMO EMPEZAMOS
-========================= -->
-
-<section id="como-empezamos">
-
-    <div class="container">
-
-        <div class="section-label">
-            Cómo empezamos
-        </div>
-
-        <h2 class="section-title">
-            Tres pasos.
-            <span>Sin vueltas.</span>
-        </h2>
-
-        <div class="steps">
-
-            <article class="step">
-
-                <div class="step-number">
-                    01
-                </div>
-
-                <h3>
-                    Escribime
-                </h3>
-
-                <p>
-                    Contame qué está pasando hoy en tu negocio o qué situación
-                    estás atravesando.
-                </p>
-
-            </article>
-
-
-            <article class="step">
-
-                <div class="step-number">
-                    02
-                </div>
-
-                <h3>
-                    Conversemos
-                </h3>
-
-                <p>
-                    Observamos tu realidad y vemos qué modalidad puede tener
-                    más sentido para el momento que estás atravesando.
-                </p>
-
-            </article>
-
-
-            <article class="step">
-
-                <div class="step-number">
-                    03
-                </div>
-
-                <h3>
-                    Empezá a entrenar
-                </h3>
-
-                <p>
-                    Comenzamos a trabajar sobre tu realidad y sobre aquello
-                    que hoy necesita atención.
-                </p>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
 
 
 <!-- =========================
@@ -817,636 +1908,597 @@ section{
 
     <div class="container">
 
-        <div
-            class="section-label"
-            style="color:var(--verde);"
-        >
-            Red de Emprendedores
+        <div class="section-label red-label">
+            Comunidad · Conexión · Crecimiento
         </div>
 
         <h2 class="section-title">
-            No emprendas
-            <span style="color:var(--verde);">
-                completamente solo.
+            Red de
+            <span class="green-text">
+                Emprendedores
             </span>
         </h2>
 
         <p class="intro-text">
-            Emprender puede ser un camino muy solitario.
-            Por eso también necesitamos espacios para conectar,
-            compartir y encontrarnos con otros.
+            Emprender puede ser un camino solitario.
+            Por eso también necesitamos espacios para conectar
+            con otros que están recorriendo su propio camino.
         </p>
 
-        <div
-            class="about-box"
-            style="border-color:rgba(32,184,137,.35);"
-        >
 
-            <p>
-                La
-                <strong style="color:var(--verde);">
-                    Red de Emprendedores
-                </strong>
-                es un espacio complementario al Gimnasio para Emprendedores.
-            </p>
+        <div class="red-box">
 
-            <p>
-                No viene a reemplazarlo. Viene a ampliar el ecosistema,
-                generando conexiones, conversaciones y posibilidades de
-                encuentro entre emprendedores.
-            </p>
-
-            <p>
-                Porque crecer también puede significar dejar de intentar
-                resolver todo solo.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     FORMACIÓN Y EXPERIENCIA
-========================= -->
-
-<section id="metodo">
-
-    <div class="container">
-
-        <div class="section-label">
-            Mi forma de trabajar
-        </div>
-
-        <h2 class="section-title">
-            Formación. Experiencia.
-            <span>Realidad.</span>
-        </h2>
-
-        <div class="about-box">
-
-            <p>
-                Mi manera de trabajar surge de la combinación entre la
-                formación profesional, la experiencia emprendedora y la
-                realidad concreta que está atravesando cada persona.
-            </p>
-
-            <p>
-                No trabajo desde recetas universales.
-                Cada proceso parte de una realidad concreta:
-                <strong>la tuya.</strong>
-            </p>
-
-            <p>
-                El objetivo no es decirte qué hacer.
-                Es generar conversaciones y espacios de entrenamiento que
-                te permitan observar lo que hoy está pasando desde nuevas
-                perspectivas.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-  <!-- =========================
-     SER · HACER · TENER
-========================= -->
-
-<section id="ser-hacer-tener">
-
-    <div class="container">
-
-        <div class="section-label">
-            Una manera de observar
-        </div>
-
-        <h2 class="section-title">
-            SER · HACER ·
-            <span>TENER</span>
-        </h2>
-
-        <p class="intro-text">
-            Muchas veces queremos cambiar nuestros resultados sin detenernos
-            a observar desde dónde estamos actuando.
-        </p>
-
-        <div class="steps">
-
-            <article class="step">
-
-                <div class="step-number">
-                    SER
-                </div>
+            <div class="red-main">
 
                 <h3>
-                    Cómo te observás
+                    Un espacio para conectar,
+                    compartir y crecer.
                 </h3>
 
                 <p>
-                    Tus creencias, tu identidad, tu manera de interpretar
-                    lo que te pasa y el lugar desde el que estás mirando
-                    tu realidad.
+                    La Red de Emprendedores es una comunidad pensada para
+                    generar conexiones, conversaciones y encuentros entre
+                    personas que están emprendiendo.
                 </p>
-
-            </article>
-
-
-            <article class="step">
-
-                <div class="step-number">
-                    HACER
-                </div>
-
-                <h3>
-                    Cómo actuás
-                </h3>
 
                 <p>
-                    Las decisiones que tomás, las acciones que repetís
-                    y las conversaciones que sostenés todos los días.
+                    No reemplaza al Gimnasio para Emprendedores.
+                    Es un espacio complementario dentro del ecosistema,
+                    pensado para que ningún emprendedor tenga que recorrer
+                    todo el camino completamente solo.
                 </p>
-
-            </article>
-
-
-            <article class="step">
-
-                <div class="step-number">
-                    TENER
-                </div>
-
-                <h3>
-                    Tus resultados
-                </h3>
-
-                <p>
-                    Aquello que hoy estás construyendo como consecuencia
-                    de la manera en que observás y actuás.
-                </p>
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     PROYECTO YAYUNA
-========================= -->
-
-<section id="yayuna">
-
-    <div class="container">
-
-        <div class="section-label">
-            Proyecto Yayuna
-        </div>
-
-        <div class="yayuna-box">
-
-            <div class="section-label">
-                25 de noviembre de 2026
-            </div>
-
-            <h2>
-                Cambiá tu mentalidad
-                para que cambie
-                <span>tu negocio.</span>
-            </h2>
-
-            <p>
-                <strong style="color:var(--dorado-claro);">
-                    Entrenamiento para emprendedores.
-                </strong>
-            </p>
-
-            <p>
-                Muchas veces el mayor límite de un emprendedor no está
-                solamente afuera.
-            </p>
-
-            <p>
-                Está en su manera de pensar, en las creencias que sostiene
-                y en la forma en que interpreta su propia realidad.
-            </p>
-
-            <p>
-                En este encuentro vamos a trabajar sobre las creencias
-                limitantes y sobre aquellas ideas que pueden estar influyendo
-                en tu relación con el dinero, el crecimiento y tus propias
-                posibilidades.
-            </p>
-
-
-            <!-- BOTÓN -->
-
-            <div style="margin-top:35px;">
-
-                <a
-                    href="https://wa.me/5491134631657"
-                    target="_blank"
-                    class="btn btn-gold"
-                >
-                    💬 Quiero mi lugar
-                </a>
 
             </div>
 
 
-            <!-- CUENTA REGRESIVA -->
+            <div class="membership">
 
-            <div id="countdown">
-
-                <div class="count-box">
-
-                    <strong id="days">
-                        00
-                    </strong>
-
-                    <span>
-                        DÍAS
-                    </span>
-
+                <div class="membership-label">
+                    MEMBRESÍA MENSUAL
                 </div>
 
-
-                <div class="count-box">
-
-                    <strong id="hours">
-                        00
-                    </strong>
-
-                    <span>
-                        HORAS
-                    </span>
-
+                <div class="membership-price">
+                    $10.000
                 </div>
 
-
-                <div class="count-box">
-
-                    <strong id="minutes">
-                        00
-                    </strong>
-
-                    <span>
-                        MINUTOS
-                    </span>
-
+                <div class="membership-period">
+                    por mes
                 </div>
 
-
-                <div class="count-box">
-
-                    <strong id="seconds">
-                        00
-                    </strong>
-
-                    <span>
-                        SEGUNDOS
-                    </span>
-
-                </div>
+                <p>
+                    La membresía es mensual y te permite formar parte de la
+                    Red durante todo ese período.
+                </p>
 
             </div>
 
+        </div>
 
-            <!-- DATOS DEL EVENTO -->
 
-            <div style="margin-top:45px;">
+        <div class="red-benefits">
 
-                <p>
+            <article class="red-benefit">
+
+                <div class="benefit-icon">
                     📅
-                    <strong>
-                        Miércoles 25 de noviembre de 2026
-                    </strong>
-                </p>
+                </div>
+
+                <h4>
+                    Durante todo el mes
+                </h4>
 
                 <p>
-                    🕑
-                    <strong>
-                        De 14:00 a 16:00 hs
-                    </strong>
+                    Formás parte de la comunidad y de los espacios de
+                    interacción, conversación y conexión que se generan
+                    durante el período de tu membresía.
                 </p>
+
+            </article>
+
+
+            <article class="red-benefit">
+
+                <div class="benefit-icon">
+                    💬
+                </div>
+
+                <h4>
+                    Espacio semanal
+                </h4>
 
                 <p>
-                    📍
-                    <strong>
-                        Yayuna Mamo
-                    </strong>
-                    <br>
-                    Av. José de San Martín 2679,
-                    Merlo, Buenos Aires.
+                    La Red se mantiene activa durante la semana para
+                    compartir experiencias, conversaciones y generar
+                    conexiones entre emprendedores.
                 </p>
 
-                <p style="margin-top:30px;">
+            </article>
 
-                    <span
-                        style="
-                        text-transform:uppercase;
-                        letter-spacing:3px;
-                        font-size:12px;
-                        "
-                    >
-                        Inversión
-                    </span>
 
-                    <br>
+            <article class="red-benefit">
 
-                    <strong
-                        style="
-                        color:var(--dorado);
-                        font-size:46px;
-                        "
-                    >
-                        $20.000
-                    </strong>
+                <div class="benefit-icon">
+                    💻
+                </div>
 
+                <h4>
+                    1 encuentro mensual
+                </h4>
+
+                <p>
+                    Un encuentro mensual por Zoom, de aproximadamente
+                    dos horas, para conversar, compartir y trabajar
+                    sobre temas vinculados al mundo emprendedor.
                 </p>
 
-            </div>
+            </article>
+
+        </div>
+
+
+        <div class="red-button-container">
+
+            <a
+                href="https://wa.me/5491134631657"
+                target="_blank"
+                class="btn btn-green"
+            >
+                Quiero ser parte de la Red
+            </a>
 
         </div>
 
     </div>
 
 </section>
+
 
 
 <!-- =========================
-     DESPUÉS DEL EVENTO
-     PROYECTO YAYUNA
+     ESTILOS ENTRENAMIENTOS
+     Y RED
 ========================= -->
 
-<section id="despues-yayuna">
+<style>
 
-    <div class="container">
+/* ENTRENAMIENTOS */
 
-        <div class="section-label">
-            Proyecto Yayuna
-        </div>
+.training-grid{
 
-        <h2 class="section-title">
-            ¿Qué pasó en
-            <span>Proyecto Yayuna?</span>
-        </h2>
+    display:grid;
 
-        <div class="about-box">
+    grid-template-columns:
+    repeat(2,minmax(0,1fr));
 
-            <p>
-                El 25 de noviembre de 2026 vivimos una nueva experiencia
-                junto a emprendedores que decidieron detenerse un momento
-                para mirar su realidad desde otro lugar.
-            </p>
+    gap:25px;
 
-            <p>
-                Este espacio será actualizado después del encuentro con
-                imágenes, videos y contenido de lo que se vivió durante
-                <strong>Proyecto Yayuna.</strong>
-            </p>
+    margin-top:50px;
 
-            <p>
-                Porque un evento puede terminar.
-                Pero las conversaciones que genera pueden continuar.
-            </p>
+}
 
-        </div>
 
-    </div>
+.training-card{
 
-</section>
+    background:var(--card);
 
+    border:1px solid var(--border);
 
-<!-- =========================
-     FRASE DE CIERRE
-========================= -->
+    border-radius:25px;
 
-<section id="reflexion">
+    padding:38px;
 
-    <div class="container">
+    display:flex;
 
-        <div class="section-label">
-            Para pensar
-        </div>
+    flex-direction:column;
 
-        <h2 class="section-title">
-            Tal vez no necesitás hacer
-            <span>más cosas.</span>
-        </h2>
+    justify-content:space-between;
 
-        <div class="about-box">
+    gap:30px;
 
-            <p style="font-size:22px;">
+}
 
-                Tal vez necesitás detenerte y observar desde qué lugar
-                estás haciendo las cosas que hacés.
 
-            </p>
+.training-card h3{
 
-            <p>
+    font-family:Georgia,serif;
 
-                Porque muchas veces seguimos buscando nuevas estrategias
-                sin mirar la manera en que estamos interpretando nuestra
-                propia realidad.
+    font-size:clamp(30px,4vw,42px);
 
-            </p>
+    line-height:1.1;
 
-            <p>
+    margin-bottom:22px;
 
-                Y ahí puede comenzar un cambio.
+}
 
-            </p>
 
-        </div>
+.training-card p{
 
-    </div>
+    color:var(--gray);
 
-</section>
-  <!-- =========================
-     PREGUNTAS FRECUENTES
-========================= -->
+    margin-bottom:17px;
 
-<section id="preguntas">
+}
 
-    <div class="container">
 
-        <div class="section-label">
-            Preguntas frecuentes
-        </div>
+.card-tag{
 
-        <h2 class="section-title">
-            Algunas preguntas,
-            <span>sin vueltas.</span>
-        </h2>
+    font-size:11px;
 
-        <div class="faq">
+    letter-spacing:2px;
 
-            <details>
+    font-weight:bold;
 
-                <summary>
-                    ¿Cómo sé qué entrenamiento es el indicado para mí?
-                </summary>
+    margin-bottom:20px;
 
-                <p>
-                    No necesitás saberlo antes de escribir. Podés contarme qué
-                    está pasando, qué situación estás atravesando o qué sentís
-                    que hoy necesitás trabajar. A partir de ahí vemos qué
-                    modalidad puede tener más sentido para vos.
-                </p>
+    color:var(--gold);
 
-            </details>
+}
 
 
-            <details>
+.btn-training{
 
-                <summary>
-                    ¿Qué diferencia hay entre el Gimnasio Grupal y el Uno a Uno?
-                </summary>
+    border:1px solid var(--gold);
 
-                <p>
-                    El Gimnasio Grupal es un espacio compartido con otros
-                    emprendedores. El Uno a Uno es un proceso individual y
-                    personalizado, pensado para trabajar directamente sobre
-                    tu propia realidad.
-                </p>
+    color:var(--gold-light);
 
-            </details>
+    width:100%;
 
+}
 
-            <details>
 
-                <summary>
-                    ¿Qué es la Red de Emprendedores?
-                </summary>
+/* COLORES MODALIDADES */
 
-                <p>
-                    Es un espacio complementario para conectar emprendedores,
-                    compartir experiencias, generar conversaciones y seguir
-                    creciendo junto a otros. No reemplaza al Gimnasio para
-                    Emprendedores.
-                </p>
+.training-gym{
+    border-top:5px solid var(--gold);
+}
 
-            </details>
+.training-one{
+    border-top:5px solid var(--blue);
+}
 
+.training-emergency{
+    border-top:5px solid var(--red);
+}
 
-            <details>
+.training-mental{
+    border-top:5px solid var(--violet);
+}
 
-                <summary>
-                    ¿Necesito tener un negocio grande para participar?
-                </summary>
+.training-full{
+    border-top:5px solid var(--orange);
+}
 
-                <p>
-                    No. El tamaño de tu negocio no define si podés participar.
-                    Lo importante es que tengas una realidad sobre la cual
-                    quieras trabajar.
-                </p>
+.training-round{
+    border-top:5px solid var(--green);
+}
 
-            </details>
 
+/* RED */
 
-            <details>
+.red-label{
+    color:var(--green);
+}
 
-                <summary>
-                    ¿Qué pasa si no sé exactamente qué necesito?
-                </summary>
 
-                <p>
-                    No pasa nada. No necesitás llegar con todas las respuestas.
-                    Podemos conversar sobre lo que está pasando y observar
-                    juntos por dónde puede comenzar el proceso.
-                </p>
+.green-text{
+    color:var(--green) !important;
+}
 
-            </details>
 
+.red-box{
 
-            <details>
+    display:grid;
 
-                <summary>
-                    ¿El Entrenamiento Mental reemplaza una terapia?
-                </summary>
+    grid-template-columns:
+    1.5fr .8fr;
 
-                <p>
-                    No. El Entrenamiento Mental es un espacio orientado a
-                    trabajar sobre la mentalidad y la manera en que el
-                    emprendedor observa su realidad. No reemplaza procesos
-                    terapéuticos, psicológicos, psiquiátricos ni otros
-                    acompañamientos profesionales de salud.
-                </p>
+    gap:25px;
 
-            </details>
+    margin-top:45px;
 
+}
 
-            <details>
 
-                <summary>
-                    ¿Dónde se realizan los entrenamientos?
-                </summary>
+.red-main{
 
-                <p>
-                    Dependiendo de la modalidad, los encuentros pueden
-                    realizarse de manera presencial u online.
-                </p>
+    background:var(--dark);
 
-            </details>
+    border:1px solid rgba(32,184,137,.35);
 
-        </div>
+    border-radius:25px;
 
-    </div>
+    padding:40px;
 
-</section>
+}
 
 
-<!-- =========================
-     CONTACTO FINAL
+.red-main h3{
+
+    font-family:Georgia,serif;
+
+    font-size:36px;
+
+    line-height:1.15;
+
+    margin-bottom:25px;
+
+}
+
+
+.red-main p{
+
+    color:var(--gray);
+
+    margin-bottom:18px;
+
+}
+
+
+.membership{
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(32,184,137,.15),
+        transparent 55%
+    ),
+
+    #101714;
+
+    border:1px solid rgba(32,184,137,.45);
+
+    border-radius:25px;
+
+    padding:40px;
+
+    text-align:center;
+
+}
+
+
+.membership-label{
+
+    color:var(--green);
+
+    letter-spacing:2px;
+
+    font-size:11px;
+
+    font-weight:bold;
+
+}
+
+
+.membership-price{
+
+    font-family:Georgia,serif;
+
+    color:var(--white);
+
+    font-size:58px;
+
+    font-weight:bold;
+
+    margin-top:15px;
+
+}
+
+
+.membership-period{
+
+    color:var(--green);
+
+    font-weight:bold;
+
+    margin-bottom:25px;
+
+}
+
+
+.membership p{
+
+    color:var(--gray);
+
+    font-size:15px;
+
+}
+
+
+.red-benefits{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,minmax(0,1fr));
+
+    gap:20px;
+
+    margin-top:25px;
+
+}
+
+
+.red-benefit{
+
+    background:#101714;
+
+    border:1px solid rgba(32,184,137,.25);
+
+    border-radius:22px;
+
+    padding:30px;
+
+}
+
+
+.benefit-icon{
+
+    font-size:30px;
+
+    margin-bottom:15px;
+
+}
+
+
+.red-benefit h4{
+
+    font-size:20px;
+
+    margin-bottom:12px;
+
+}
+
+
+.red-benefit p{
+
+    color:var(--gray);
+
+    font-size:15px;
+
+}
+
+
+.red-button-container{
+
+    margin-top:35px;
+
+    text-align:center;
+
+}
+
+
+/* =========================
+   RESPONSIVE CELULAR
+========================= */
+
+@media(max-width:768px){
+
+    .training-grid,
+    .red-box,
+    .red-benefits{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .training-card{
+
+        padding:28px;
+
+    }
+
+
+    .red-main,
+    .membership{
+
+        padding:28px;
+
+    }
+
+
+    .membership-price{
+
+        font-size:48px;
+
+    }
+
+}
+
+    </style>
+    <!-- =========================
+     CONTACTO
 ========================= -->
 
 <section id="contacto">
 
     <div class="container">
 
+        <div class="section-label">
+            Contacto
+        </div>
+
+        <h2 class="section-title">
+            ¿Sentís que llegó el momento
+            de <span>trabajar sobre vos
+            y tu negocio?</span>
+        </h2>
+
+        <p class="intro-text">
+            Cada emprendedor está atravesando una realidad diferente.
+            Podemos conversar y descubrir cuál de los espacios de
+            entrenamiento puede tener más sentido para vos hoy.
+        </p>
+
+
         <div class="contact-box">
 
-            <div class="section-label">
-                El próximo paso
-            </div>
-
-            <h2>
-                ¿Querés trabajar sobre
-                <span>tu realidad?</span>
-            </h2>
+            <h3>
+                Hablemos.
+            </h3>
 
             <p>
-                No importa si hoy no tenés todas las respuestas.
+                Podés escribirme directamente por WhatsApp.
             </p>
 
-            <p>
-                Podés detenerte, mirar lo que está pasando y empezar a
-                trabajar sobre aquello que hoy necesita atención.
-            </p>
+            <a
+                href="https://wa.me/5491134631657"
+                target="_blank"
+                class="btn btn-gold"
+            >
+                💬 Escribirme por WhatsApp
+            </a>
 
-            <p>
-                Contame dónde estás. Contame qué está pasando.
-                Y vemos juntos cuál puede ser el próximo paso.
-            </p>
+        </div>
 
 
-            <div class="contact-buttons">
+        <div class="contact-socials">
 
-                <a
-                    href="https://wa.me/5491134631657"
-                    target="_blank"
-                    class="btn btn-gold"
-                >
-                    💬 Hablar por WhatsApp
-                </a>
+            <a
+                href="https://www.instagram.com/cris.arre?rpxt=MTNzdG1nejRkMDZyYw=="
+                target="_blank"
+                class="contact-social"
+            >
 
-            </div>
+                <span>📸</span>
+
+                <div>
+
+                    <strong>
+                        Instagram de Cris
+                    </strong>
+
+                    <small>
+                        @cris.arre
+                    </small>
+
+                </div>
+
+            </a>
+
+
+            <a
+                href="https://www.instagram.com/cyc_.hogar?vrfl=MW9yZXZpend0enh4MA=="
+                target="_blank"
+                class="contact-social"
+            >
+
+                <span>🏠</span>
+
+                <div>
+
+                    <strong>
+                        CyC Hogar
+                    </strong>
+
+                    <small>
+                        @cyc_.hogar
+                    </small>
+
+                </div>
+
+            </a>
 
         </div>
 
@@ -1455,7 +2507,142 @@ section{
 </section>
 
 
-</main>
+
+<!-- =========================
+     PROYECTO YAYUNA
+     CIERRE DE LA PÁGINA
+========================= -->
+
+<section id="yayuna" class="yayuna-section">
+
+    <div class="container">
+
+
+        <div class="yayuna-content">
+
+
+            <div class="section-label yayuna-label">
+
+                Proyecto especial
+
+            </div>
+
+
+            <h2 class="yayuna-title">
+
+                PROYECTO
+
+                <span>
+                    YAYUNA
+                </span>
+
+            </h2>
+
+
+            <p class="yayuna-date">
+
+                25 DE NOVIEMBRE DE 2026
+
+            </p>
+
+
+            <p class="yayuna-text">
+
+                Un encuentro especial.
+
+                Una experiencia pensada para emprendedores
+                que quieren detenerse, observar, conectar
+                y abrir nuevas posibilidades.
+
+            </p>
+
+
+            <!-- TEMPORIZADOR -->
+
+            <div class="countdown">
+
+                <div class="countdown-item">
+
+                    <span id="days">
+                        00
+                    </span>
+
+                    <small>
+                        DÍAS
+                    </small>
+
+                </div>
+
+
+                <div class="countdown-item">
+
+                    <span id="hours">
+                        00
+                    </span>
+
+                    <small>
+                        HORAS
+                    </small>
+
+                </div>
+
+
+                <div class="countdown-item">
+
+                    <span id="minutes">
+                        00
+                    </span>
+
+                    <small>
+                        MINUTOS
+                    </small>
+
+                </div>
+
+
+                <div class="countdown-item">
+
+                    <span id="seconds">
+                        00
+                    </span>
+
+                    <small>
+                        SEGUNDOS
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <p
+                id="countdownMessage"
+                class="countdown-message"
+            >
+            </p>
+
+
+            <div class="yayuna-button-container">
+
+                <a
+                    href="https://wa.me/5491134631657"
+                    target="_blank"
+                    class="btn yayuna-button"
+                >
+
+                    QUIERO MI LUGAR
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
 
 
 <!-- =========================
@@ -1466,36 +2653,33 @@ section{
 
     <div class="container footer-content">
 
-        <div>
+        <div class="footer-name">
 
-            <div class="logo">
-                CRIS <span>ARREGUI</span>
-            </div>
-
-            <p>
-                Entrenador de Emprendedores
-            </p>
-
-            <p class="footer-frase">
-                Formación · Experiencia · Realidad
-            </p>
+            CRIS
+            <span>
+                ARREGUI
+            </span>
 
         </div>
 
 
-        <div class="footer-copy">
+        <p>
 
-            © 2026 Cris Arregui
+            Entrenador de Emprendedores
 
-            <br>
+        </p>
 
-            Todos los derechos reservados.
 
-        </div>
+        <p class="footer-copy">
+
+            © 2026 · Cris Arregui
+
+        </p>
 
     </div>
 
 </footer>
+
 
 
 <!-- =========================
@@ -1508,127 +2692,705 @@ section{
     class="whatsapp-float"
     aria-label="Hablar por WhatsApp"
 >
+
     💬
+
 </a>
+
+
+
+<!-- =========================
+     ESTILOS FINALES
+========================= -->
+
+<style>
+
+/* CONTACTO */
+
+#contacto{
+
+    background:#0d0d0d;
+
+}
+
+
+.contact-box{
+
+    margin-top:45px;
+
+    padding:45px;
+
+    text-align:center;
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(212,175,55,.13),
+        transparent 55%
+    ),
+
+    var(--dark);
+
+    border:1px solid rgba(212,175,55,.35);
+
+    border-radius:28px;
+
+}
+
+
+.contact-box h3{
+
+    font-family:Georgia,serif;
+
+    font-size:42px;
+
+    margin-bottom:12px;
+
+}
+
+
+.contact-box p{
+
+    color:var(--gray);
+
+    margin-bottom:25px;
+
+}
+
+
+.contact-socials{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,minmax(0,1fr));
+
+    gap:20px;
+
+    margin-top:25px;
+
+}
+
+
+.contact-social{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:25px;
+
+    background:var(--dark);
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    transition:.3s;
+
+}
+
+
+.contact-social:hover{
+
+    border-color:var(--gold);
+
+    transform:translateY(-3px);
+
+}
+
+
+.contact-social span{
+
+    font-size:30px;
+
+}
+
+
+.contact-social strong{
+
+    display:block;
+
+    color:var(--white);
+
+}
+
+
+.contact-social small{
+
+    display:block;
+
+    color:var(--gray);
+
+    margin-top:3px;
+
+}
+
+
+/* =========================
+   YAYUNA
+========================= */
+
+.yayuna-section{
+
+    min-height:90vh;
+
+    display:flex;
+
+    align-items:center;
+
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+    radial-gradient(
+        circle at 50% 30%,
+        rgba(212,175,55,.20),
+        transparent 25%
+    ),
+
+    radial-gradient(
+        circle at 20% 80%,
+        rgba(32,184,137,.10),
+        transparent 30%
+    ),
+
+    linear-gradient(
+        180deg,
+        #090909,
+        #120f08
+    );
+
+}
+
+
+.yayuna-content{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+
+.yayuna-label{
+
+    color:var(--gold);
+
+}
+
+
+.yayuna-title{
+
+    font-family:Georgia,serif;
+
+    font-size:clamp(65px,12vw,140px);
+
+    line-height:.9;
+
+    letter-spacing:3px;
+
+    margin-bottom:30px;
+
+}
+
+
+.yayuna-title span{
+
+    display:block;
+
+    color:var(--gold);
+
+}
+
+
+.yayuna-date{
+
+    color:var(--gold-light);
+
+    font-size:clamp(18px,3vw,25px);
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+
+    margin-bottom:30px;
+
+}
+
+
+.yayuna-text{
+
+    max-width:700px;
+
+    margin:0 auto 45px;
+
+    color:var(--gray);
+
+    font-size:19px;
+
+}
+
+
+/* TEMPORIZADOR */
+
+.countdown{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,minmax(0,1fr));
+
+    gap:15px;
+
+    max-width:750px;
+
+    margin:0 auto;
+
+}
+
+
+.countdown-item{
+
+    background:rgba(0,0,0,.45);
+
+    border:1px solid rgba(212,175,55,.30);
+
+    border-radius:20px;
+
+    padding:25px 10px;
+
+}
+
+
+.countdown-item span{
+
+    display:block;
+
+    font-family:Georgia,serif;
+
+    font-size:clamp(35px,6vw,65px);
+
+    color:var(--white);
+
+    line-height:1;
+
+}
+
+
+.countdown-item small{
+
+    display:block;
+
+    color:var(--gold);
+
+    font-size:10px;
+
+    letter-spacing:2px;
+
+    margin-top:12px;
+
+}
+
+
+.countdown-message{
+
+    color:var(--gold-light);
+
+    font-size:18px;
+
+    margin-top:25px;
+
+}
+
+
+.yayuna-button-container{
+
+    margin-top:35px;
+
+}
+
+
+.yayuna-button{
+
+    background:var(--gold);
+
+    color:#111;
+
+    font-size:17px;
+
+    padding:18px 35px;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    padding:50px 0;
+
+    background:#050505;
+
+    border-top:1px solid var(--border);
+
+    text-align:center;
+
+}
+
+
+.footer-name{
+
+    font-family:Georgia,serif;
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+}
+
+
+.footer-name span{
+
+    color:var(--gold);
+
+}
+
+
+.footer-content p{
+
+    color:var(--gray);
+
+    margin-top:8px;
+
+}
+
+
+.footer-copy{
+
+    font-size:13px;
+
+    margin-top:25px !important;
+
+}
+
+
+/* =========================
+   WHATSAPP FLOTANTE
+========================= */
+
+.whatsapp-float{
+
+    position:fixed;
+
+    right:22px;
+
+    bottom:22px;
+
+    width:58px;
+
+    height:58px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#25D366;
+
+    color:white;
+
+    border-radius:50%;
+
+    font-size:27px;
+
+    z-index:2000;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.35);
+
+    transition:.3s;
+
+}
+
+
+.whatsapp-float:hover{
+
+    transform:scale(1.08);
+
+}
+
+
+/* =========================
+   RESPONSIVE FINAL
+========================= */
+
+@media(max-width:768px){
+
+    section{
+
+        padding:75px 0;
+
+    }
+
+
+    .hero{
+
+        min-height:auto;
+
+        padding:100px 0 80px;
+
+    }
+
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+    }
+
+
+    .hero-buttons .btn{
+
+        width:100%;
+
+    }
+
+
+    .contact-socials{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .contact-box{
+
+        padding:30px 20px;
+
+    }
+
+
+    .contact-box h3{
+
+        font-size:35px;
+
+    }
+
+
+    .countdown{
+
+        grid-template-columns:
+        repeat(2,minmax(0,1fr));
+
+        max-width:420px;
+
+    }
+
+
+    .countdown-item{
+
+        padding:20px 8px;
+
+    }
+
+
+    .yayuna-title{
+
+        font-size:65px;
+
+    }
+
+
+    .whatsapp-float{
+
+        width:55px;
+
+        height:55px;
+
+        right:18px;
+
+        bottom:18px;
+
+    }
+
+}
+
+</style>
+
 
 
 <!-- =========================
      JAVASCRIPT
-     TEMPORIZADOR YAYUNA
 ========================= -->
 
 <script>
 
-const targetDate = new Date(
-    "2026-11-25T14:00:00-03:00"
-).getTime();
+/* =========================
+   MENÚ CELULAR
+========================= */
+
+const menuToggle =
+document.getElementById("menuToggle");
+
+const mainNav =
+document.getElementById("mainNav");
 
 
-const countdownInterval = setInterval(function(){
+menuToggle.addEventListener(
+    "click",
+    function(){
 
-    const now = new Date().getTime();
+        mainNav.classList.toggle("active");
 
-    const distance = targetDate - now;
+    }
+);
+
+
+/* CERRAR MENÚ AL TOCAR UN LINK */
+
+document.querySelectorAll("#mainNav a")
+.forEach(function(link){
+
+    link.addEventListener(
+        "click",
+        function(){
+
+            mainNav.classList.remove("active");
+
+        }
+    );
+
+});
+
+
+/* =========================
+   TEMPORIZADOR YAYUNA
+========================= */
+
+const targetDate =
+new Date("November 25, 2026 00:00:00")
+.getTime();
+
+
+function updateCountdown(){
+
+    const now =
+    new Date().getTime();
+
+    const distance =
+    targetDate - now;
+
+
+    const daysElement =
+    document.getElementById("days");
+
+    const hoursElement =
+    document.getElementById("hours");
+
+    const minutesElement =
+    document.getElementById("minutes");
+
+    const secondsElement =
+    document.getElementById("seconds");
+
+    const messageElement =
+    document.getElementById("countdownMessage");
 
 
     if(distance <= 0){
 
-        clearInterval(countdownInterval);
+        daysElement.textContent = "00";
+
+        hoursElement.textContent = "00";
+
+        minutesElement.textContent = "00";
+
+        secondsElement.textContent = "00";
 
 
-        document.getElementById("countdown").innerHTML =
+        messageElement.textContent =
+        "El Proyecto Yayuna ya comenzó.";
 
-        `
-        <div
-            style="
-            grid-column:1/-1;
-            text-align:center;
-            padding:25px;
-            color:#d4af37;
-            font-size:20px;
-            font-weight:bold;
-            "
-        >
-
-            El encuentro ya comenzó.
-
-        </div>
-        `;
 
         return;
 
     }
 
 
-    const days = Math.floor(
-
-        distance /
-        (1000 * 60 * 60 * 24)
-
+    const days =
+    Math.floor(
+        distance / (1000 * 60 * 60 * 24)
     );
 
 
-    const hours = Math.floor(
-
-        (
-            distance %
-            (1000 * 60 * 60 * 24)
-        )
+    const hours =
+    Math.floor(
+        (distance % (1000 * 60 * 60 * 24))
         /
         (1000 * 60 * 60)
-
     );
 
 
-    const minutes = Math.floor(
-
-        (
-            distance %
-            (1000 * 60 * 60)
-        )
+    const minutes =
+    Math.floor(
+        (distance % (1000 * 60 * 60))
         /
         (1000 * 60)
-
     );
 
 
-    const seconds = Math.floor(
-
-        (
-            distance %
-            (1000 * 60)
-        )
+    const seconds =
+    Math.floor(
+        (distance % (1000 * 60))
         /
         1000
-
     );
 
 
-    document.getElementById("days").innerText =
-
-        String(days).padStart(2,"0");
-
-
-    document.getElementById("hours").innerText =
-
-        String(hours).padStart(2,"0");
+    daysElement.textContent =
+    String(days).padStart(2,"0");
 
 
-    document.getElementById("minutes").innerText =
-
-        String(minutes).padStart(2,"0");
-
-
-    document.getElementById("seconds").innerText =
-
-        String(seconds).padStart(2,"0");
+    hoursElement.textContent =
+    String(hours).padStart(2,"0");
 
 
-},1000);
+    minutesElement.textContent =
+    String(minutes).padStart(2,"0");
 
+
+    secondsElement.textContent =
+    String(seconds).padStart(2,"0");
+
+}
+
+
+updateCountdown();
+
+
+setInterval(
+    updateCountdown,
+    1000
+);
 
 </script>
 
 
+</main>
+
 </body>
+
 </html>
