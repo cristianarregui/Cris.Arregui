@@ -1873,6 +1873,114 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
+<style>
+/* CORRECCIÓN DE DISEÑO PARA CELULARES */
+@media (max-width: 768px) {
+
+  /* ENTRENAMIENTOS: UNA TARJETA POR FILA */
+  #entrenamientos .training-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 20px;
+    width: 100%;
+  }
+
+  #entrenamientos .training-card {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 28px 23px;
+    overflow-wrap: break-word;
+  }
+
+  #entrenamientos .training-card h3 {
+    font-size: clamp(27px, 8vw, 36px);
+    line-height: 1.12;
+    overflow-wrap: break-word;
+  }
+
+  #entrenamientos .training-card .btn {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    white-space: normal;
+  }
+
+  /* RED: BENEFICIOS EN UNA SOLA COLUMNA */
+  #red .red-benefits {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 16px;
+  }
+
+  #red .red-benefit {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 28px;
+  }
+
+  /* RED: PRESENTACIÓN PRINCIPAL */
+  #red .red-box {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 18px;
+  }
+
+  #red .red-main,
+  #red .membership {
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 28px 23px;
+  }
+
+  #red .red-main h3 {
+    font-size: clamp(27px, 8vw, 35px);
+  }
+
+  #red .red-prize {
+    padding: 28px 20px;
+  }
+
+  #red .prize-highlight {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  #red .red-button-container .btn {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* EVITAR DESBORDES HORIZONTALES */
+  #entrenamientos,
+  #red {
+    overflow-x: hidden;
+  }
+
+  #entrenamientos *,
+  #red * {
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  /* MENÚ: PERMITIR QUE LOS ENLACES SE ACOMODEN */
+  header .container {
+    flex-wrap: wrap;
+  }
+
+  header nav {
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  header nav a {
+    white-space: normal;
+  }
+}
+      </style>
+    w
 </body>
 </html>
 <!-- FIN DEL BLOQUE 4 DE 4 -->
